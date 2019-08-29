@@ -1,15 +1,13 @@
 import java.util.HashMap;
-
-
-/*问题：Given a string, find the length of the longest substring without repeating characters.
-思路：
-"滑动窗口"
-    比方说 abcabccc 当你右边扫描到abca的时候你得把第一个a删掉得到bca，
-    然后"窗口"继续向右滑动，每当加到一个新char的时候，左边检查有无重复的char，
-    然后如果没有重复的就正常添加，
-    有重复的话就左边扔掉一部分（从最左到重复char这段扔掉），在这个过程中记录最大窗口长度*/
 /**
  * @author 苏若墨
+ * 问题：Given a string, find the length of the longest substring without repeating characters.
+ * 思路：
+ * "滑动窗口"
+ *     比方说 abcabccc 当你右边扫描到abca的时候你得把第一个a删掉得到bca，
+ *     然后"窗口"继续向右滑动，每当加到一个新char的时候，左边检查有无重复的char，
+ *     然后如果没有重复的就正常添加，
+ *     有重复的话就左边扔掉一部分（从最左到重复char这段扔掉），在这个过程中记录最大窗口长度
  */
 public class LongestSubString {
     public static void main(String[] args) {

@@ -3,6 +3,12 @@ import java.util.Arrays;
 import java.util.List;
 /**
 *@author 苏若墨
+ * 问题：Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0?
+ * Find all unique triplets in the array which gives the sum of zero.
+ * 思路：我们采用`分治`的思想. 想要找出三个数相加等于0，我们可以数组依次遍历，
+ * 每一项a[i]我们都认为它是最终能够用组成0中的一个数字，那么我们的目标就是找到
+ * 剩下的元素（除a[i]）`两个`相加等于-a[i].
+ * 通过上面的思路，我们的问题转化为了`给定一个数组，找出其中两个相加等于给定值`
  */
 public class ThreeSum {
     public static void main(String[] args) {
