@@ -13,33 +13,40 @@ import java.util.List;
 public class ThreeSum {
     public static void main(String[] args) {
         int[] nums={-1, 0, 1, 2, -1, -4};
+        //对数组进行排序
         Arrays.sort(nums);
         List<List<Integer>> ls = new ArrayList<>();
         for (int i = 0; i < nums.length - 2; i++) {
-            // 跳过可能重复的答案
+            // 跳过可能重复的答案nums[i] = nums[i - 1]时重复
             if (i == 0 || (i > 0 && nums[i] != nums[i - 1])) {
+                //固定一个数字后，设置左右指针向中间移动
                 int l = i + 1, r = nums.length - 1, sum = 0 - nums[i];
                 while (l < r) {
+                    //如果前后两个数字之和等于固定数字的相反数，即满足三数之和为0的条件，加入list
                     if (nums[l] + nums[r] == sum) {
                         ls.add(Arrays.asList(nums[i], nums[l], nums[r]));
+                        // 跳过重复的答案,左指针向右移动
                         while (l < r && nums[l] == nums[l + 1]) {
                             l++;
                         }
+                        // 跳过重复的答案，右指针向左移动
                         while (l < r && nums[r] == nums[r - 1]) {
                             r--;
                         }
+                        //不满足上面条件时执行
                         l++;
                         r--;
                     } else if (nums[l] + nums[r] < sum) {
+                        //两树之和小于预期值，移动左指针
                         while (l < r && nums[l] == nums[l + 1]) {
-                            l++;   // 跳过重复值
+                            l++;
                         }
                         l++;
                     } else {
+                        //两树之和大于预期值，移动右指针
                         while (l < r && nums[r] == nums[r - 1]) {
                             r--;
                         }
-
                         r--;
                     }
                 }
