@@ -1,40 +1,43 @@
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author 苏若墨
+ * 问题：给定两个非空链表来表示两个非负整数。位数按照逆序方式存储，它们的每个节点只存储单个数字。将两数相加返回一个新的链表。
  *  * Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
  *  * Output: 7 -> 0 -> 8
  */
-public class AddTwoNumbers {
-    public static void main(String[] args) {
-        List<Integer> list1=new ArrayList<>();
-        list1.add(1);
-        list1.add(2);
-        list1.add(5);
-        List<Integer> list2=new ArrayList<>();
-        list2.add(5);
-        list2.add(8);
-        list2.add(4);
-        addTwoNumbers(list1,list2);
-    }
+class AddTwoNumbers {
+    public ListNode add(ListNode l1, ListNode l2) {
+        ListNode dummyHead = new ListNode(0);
+        ListNode p = l1, q = l2, curr = dummyHead;
+        //carry 表示进位数
+        int carry = 0;
+        while (p != null || q != null) {
+            int x = (p != null) ? p.val : 0;
+            int y = (q != null) ? q.val : 0;
+            int sum = carry + x + y;
+            //进位数
+            carry = sum / 10;
+            //新节点的数值为sum % 10
+            curr.next = new ListNode(sum % 10);
+            curr = curr.next;
+            if (p != null) {
+                p = p.next;
+            }
+            if (q != null) {
+                q = q.next;
+            }
 
-    private static void addTwoNumbers(List<Integer> list1, List<Integer> list2) {
-        List<Integer> list3=new ArrayList<>();
-        for(int i=0;i<list1.size();i++){
-            int n=list1.get(i)+list2.get(i);
-            if(n<10){
-                list3.add(n);
-            }
-            else{
-                int z=n%10;
-                list3.add(z);
-            }
         }
-        for(int i=0;i<list1.size();i++){
-            System.out.println("list1:"+list1.get(i));
-            System.out.println("list2:"+list2.get(i));
-            System.out.println("list3:"+list3.get(i));
+        if (carry > 0) {
+            curr.next = new ListNode(carry);
         }
+        return dummyHead.next;
     }
+    class ListNode{
+           int val;
+           ListNode next;
+           ListNode(int x){
+              val=x;
+         }
+     }
 }
