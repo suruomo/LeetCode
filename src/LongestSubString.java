@@ -12,18 +12,23 @@ import java.util.HashMap;
 public class LongestSubString {
     public static void main(String[] args) {
         String s="abchahbc";
-        HashMap<Character,Integer> hashMap=new HashMap<>();
+        HashMap<Character,Integer> hashMap=new HashMap<>(10);
         int leftBound = 0;
         int max = 0;
+        String sub="";
         for(int i=0; i<s.length();i++){
             char  c = s.charAt(i);
             //窗口左边可能为下一个char，或者不变
             leftBound = Math.max(leftBound,(hashMap.containsKey(c))? hashMap.get(c)+1:0);
-            //当前窗口长度
-            max = Math.max(max, i-leftBound+1);
+            //当前窗口最大长度，记录当前字串
+            if(max<=(i-leftBound+1)){
+                sub=hashMap.keySet().toString();
+                max = Math.max(max, i-leftBound+1);
+            }
             //添加该字符
             hashMap.put(c,i);
         }
-        System.out.printf("最大字串是：%d",max);
+        System.out.printf("最大字串是：%d\n",max);
+        System.out.printf("最大字串是：%s",sub);
     }
 }
