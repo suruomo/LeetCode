@@ -5,7 +5,7 @@ import java.util.HashSet;
  */
 public class RemoveDuplicate {
     public static void main(String[] args) {
-        int[] a={0,0,1,1,1,2,2,3,4,4,5,5};
+        int[] a={1,1,2};
         remove(a);
     }
 
@@ -14,6 +14,6 @@ public class RemoveDuplicate {
         for(int i:a){
             hashSet.add(i);
         }
-        System.out.println(hashSet);
+        System.out.println(hashSet.size());
     }
 }
