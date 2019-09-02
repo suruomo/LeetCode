@@ -4,9 +4,7 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5691449-f57d-4c6d-bd9a-d9eace4eaaa7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/RemoveDuplicate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RemoveDuplicate.java" afterDir="false" />
-    </list>
+    <list default="true" id="e5691449-f57d-4c6d-bd9a-d9eace4eaaa7" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,8 +74,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/RemoveElements.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+            <state relative-caret-position="40">
+              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -95,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="13350">
-              <caret line="556" column="10" selection-start-line="556" selection-start-column="10" selection-end-line="556" selection-end-column="10" />
+              <caret line="554" column="10" selection-start-line="554" selection-start-column="10" selection-end-line="554" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -156,8 +154,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
+    <option name="x" value="775" />
+    <option name="y" value="126" />
     <option name="width" value="940" />
     <option name="height" value="634" />
   </component>
@@ -225,7 +223,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RemoveDuplicate">
+  <component name="RunManager" selected="Application.SearchInsertPosition">
     <configuration name="DivideTwoIntegers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DivideTwoIntegers" />
       <module name="leetcode" />
@@ -240,8 +238,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RemoveNthNode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RemoveNthNode" />
+    <configuration name="SearchInsertPosition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SearchInsertPosition" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -262,19 +260,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.RemoveNthNode" />
       <item itemvalue="Application.SwapNodesInParis" />
       <item itemvalue="Application.RemoveDuplicate" />
       <item itemvalue="Application.DivideTwoIntegers" />
       <item itemvalue="Application.ValidPalindrome" />
+      <item itemvalue="Application.SearchInsertPosition" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SearchInsertPosition" />
         <item itemvalue="Application.RemoveDuplicate" />
         <item itemvalue="Application.ValidPalindrome" />
         <item itemvalue="Application.DivideTwoIntegers" />
         <item itemvalue="Application.SwapNodesInParis" />
-        <item itemvalue="Application.RemoveNthNode" />
       </list>
     </recent_temporary>
   </component>
@@ -302,18 +300,18 @@
       <workItem from="1567218776906" duration="92000" />
       <workItem from="1567218895598" duration="4951000" />
       <workItem from="1567344308012" duration="987000" />
-      <workItem from="1567413410379" duration="4648000" />
+      <workItem from="1567413410379" duration="5858000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25483000" />
+    <option name="totallyTimeSpent" value="26693000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="620" y="101" width="752" height="507" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16353887" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.351585" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -322,7 +320,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27479893" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.5466667" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40214476" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -407,7 +405,7 @@
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13350">
-          <caret line="556" column="10" selection-start-line="556" selection-start-column="10" selection-end-line="556" selection-end-column="10" />
+          <caret line="554" column="10" selection-start-line="554" selection-start-column="10" selection-end-line="554" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -462,8 +460,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RemoveElements.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        <state relative-caret-position="40">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
         </state>
       </provider>
     </entry>
