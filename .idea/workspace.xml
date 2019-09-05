@@ -81,16 +81,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MergeSortedArray">
+  <component name="RunManager" selected="Application.QinHeShu">
     <configuration name="MaxProfit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MaxProfit" />
-      <module name="leetcode" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MaxSubArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MaxSubArray" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -103,13 +96,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlusOne" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PlusOne" />
-      <module name="leetcode" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PscalsTrangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PscalsTrangle" />
       <module name="leetcode" />
@@ -117,20 +103,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="QinHeShu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="QinHeShu" />
+      <module name="leetcode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QinHeShu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="QinHeShu" />
+      <module name="leetcode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.MaxSubArray" />
-      <item itemvalue="Application.PlusOne" />
       <item itemvalue="Application.PscalsTrangle" />
       <item itemvalue="Application.MaxProfit" />
       <item itemvalue="Application.MergeSortedArray" />
+      <item itemvalue="Application.QinHeShu" />
+      <item itemvalue="Application.QinHeShu" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.QinHeShu" />
+        <item itemvalue="Application.QinHeShu" />
         <item itemvalue="Application.MergeSortedArray" />
         <item itemvalue="Application.MaxProfit" />
         <item itemvalue="Application.PscalsTrangle" />
-        <item itemvalue="Application.PlusOne" />
-        <item itemvalue="Application.MaxSubArray" />
       </list>
     </recent_temporary>
   </component>
@@ -160,7 +160,8 @@
       <workItem from="1567344308012" duration="987000" />
       <workItem from="1567413410379" duration="10863000" />
       <workItem from="1567665091115" duration="4148000" />
-      <workItem from="1567670958863" duration="233000" />
+      <workItem from="1567670958863" duration="575000" />
+      <workItem from="1567676252671" duration="1752000" />
     </task>
     <servers />
   </component>
@@ -172,7 +173,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
