@@ -81,16 +81,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MajorityElement">
-    <configuration name="MajorityElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MajorityElement" />
+  <component name="RunManager" selected="Application.ContainsDuplicate">
+    <configuration name="ContainsDuplicate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ContainsDuplicate" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MergeSortedArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MergeSortedArray" />
+    <configuration name="MajorityElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MajorityElement" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -118,19 +118,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.MergeSortedArray" />
       <item itemvalue="Application.QinHeShu" />
       <item itemvalue="Application.QinHeShu" />
       <item itemvalue="Application.TwoSumSortedArray" />
       <item itemvalue="Application.MajorityElement" />
+      <item itemvalue="Application.ContainsDuplicate" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ContainsDuplicate" />
         <item itemvalue="Application.MajorityElement" />
         <item itemvalue="Application.TwoSumSortedArray" />
         <item itemvalue="Application.QinHeShu" />
         <item itemvalue="Application.QinHeShu" />
-        <item itemvalue="Application.MergeSortedArray" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +161,7 @@
       <workItem from="1567413410379" duration="10863000" />
       <workItem from="1567665091115" duration="4148000" />
       <workItem from="1567670958863" duration="575000" />
-      <workItem from="1567676252671" duration="7038000" />
+      <workItem from="1567676252671" duration="9506000" />
     </task>
     <servers />
   </component>
