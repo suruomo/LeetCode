@@ -161,7 +161,11 @@
       <workItem from="1567413410379" duration="10863000" />
       <workItem from="1567665091115" duration="4148000" />
       <workItem from="1567670958863" duration="575000" />
+<<<<<<< HEAD
       <workItem from="1567676252671" duration="9597000" />
+=======
+      <workItem from="1567676252671" duration="9506000" />
+>>>>>>> master
     </task>
     <servers />
   </component>

@@ -2,8 +2,11 @@ import java.util.HashMap;
 
 /**
  * @author 苏若墨
+<<<<<<< HEAD
  * 问题：若一个数组包含重复数字返回true,否则false;
  * 思路：哈希表
+=======
+>>>>>>> master
  */
 public class ContainsDuplicate {
     public static void main(String[] args) {
