@@ -1,5 +1,9 @@
 package array;
 
+/**
+ * @author 苏若墨
+ * 问题：移除一个数组的某数字，返回当前数组长度
+ */
 public class RemoveElements {
     public static void main(String[] args) {
         int[]a={2,3,3,2};
