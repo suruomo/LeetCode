@@ -1,3 +1,5 @@
+package array;
+
 import java.util.HashMap;
 /**
  * @author 苏若墨

@@ -1,4 +1,4 @@
-import java.util.Scanner;
+package array;
 
 /**
  * @author 苏若墨

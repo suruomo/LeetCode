@@ -1,3 +1,5 @@
+package array;
+
 /**
  * @author 苏若墨
  * 问题：二分查找
