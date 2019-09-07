@@ -1,3 +1,5 @@
+package array;
+
 import java.util.Scanner;
 /**
  * @author 苏若墨

@@ -6,7 +6,30 @@
   <component name="ChangeListManager">
     <list default="true" id="e5691449-f57d-4c6d-bd9a-d9eace4eaaa7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QinHeShu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QinHeShu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddTwoNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/AddTwoNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/BinarySearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ContainsDuplicate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/ContainsDuplicate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DivideTwoIntegers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/DivideTwoIntegers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LongestSubString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/LongestSubString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MajorityElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/MajorityElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MatchCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/MatchCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MaxProfit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/MaxProfit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MaxSubArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/MaxSubArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MergeSortedArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/MergeSortedArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MissingNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/MissingNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MostWater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/MostWater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlusOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/PlusOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrimeNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/PrimeNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PscalsTrangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/PscalsTrangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QinHeShu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/QinHeShu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RemoveDuplicate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/RemoveDuplicate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RemoveElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/RemoveElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RemoveNthNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/RemoveNthNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SearchInsertPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/SearchInsertPosition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SwapNodesInParis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Array/SwapNodesInParis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThreeSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/ThreeSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TwoSumSortedArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/TwoSumSortedArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ValidPalindrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/ValidPalindrome.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,28 +107,28 @@
   </component>
   <component name="RunManager" selected="Application.PrimeNumber">
     <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BinarySearch" />
+      <option name="MAIN_CLASS_NAME" value="array.BinarySearch" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="MissingNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MissingNumbers" />
+      <option name="MAIN_CLASS_NAME" value="array.MissingNumbers" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="PrimeNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PrimeNumber" />
+      <option name="MAIN_CLASS_NAME" value="array.PrimeNumber" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="QinHeShu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="QinHeShu" />
+      <option name="MAIN_CLASS_NAME" value="array.QinHeShu" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -119,7 +142,7 @@
       </method>
     </configuration>
     <configuration name="TwoSumSortedArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TwoSumSortedArray" />
+      <option name="MAIN_CLASS_NAME" value="array.TwoSumSortedArray" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,7 +193,7 @@
       <workItem from="1567665091115" duration="4148000" />
       <workItem from="1567670958863" duration="575000" />
       <workItem from="1567676252671" duration="5047000" />
-      <workItem from="1567832761325" duration="2383000" />
+      <workItem from="1567832761325" duration="5018000" />
     </task>
     <servers />
   </component>
@@ -191,15 +214,6 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/PrimeNumber.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="head" />
