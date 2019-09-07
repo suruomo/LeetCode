@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5691449-f57d-4c6d-bd9a-d9eace4eaaa7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MissingNumbers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,9 +81,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MissingNumbers">
-    <configuration name="MaxProfit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MaxProfit" />
+  <component name="RunManager" selected="Application.BinarySearch">
+    <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BinarySearch" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -126,19 +125,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.MaxProfit" />
       <item itemvalue="Application.MergeSortedArray" />
       <item itemvalue="Application.QinHeShu" />
       <item itemvalue="Application.TwoSumSortedArray" />
       <item itemvalue="Application.MissingNumbers" />
+      <item itemvalue="Application.BinarySearch" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BinarySearch" />
         <item itemvalue="Application.MissingNumbers" />
         <item itemvalue="Application.TwoSumSortedArray" />
         <item itemvalue="Application.QinHeShu" />
         <item itemvalue="Application.QinHeShu" />
-        <item itemvalue="Application.MergeSortedArray" />
       </list>
     </recent_temporary>
   </component>
@@ -170,6 +169,7 @@
       <workItem from="1567665091115" duration="4148000" />
       <workItem from="1567670958863" duration="575000" />
       <workItem from="1567676252671" duration="5047000" />
+      <workItem from="1567832761325" duration="1252000" />
     </task>
     <servers />
   </component>
