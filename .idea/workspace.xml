@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e5691449-f57d-4c6d-bd9a-d9eace4eaaa7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/array/RemoveElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/RemoveElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/array/MissNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/MissNumbers.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +176,7 @@
       <workItem from="1567665091115" duration="4148000" />
       <workItem from="1567670958863" duration="575000" />
       <workItem from="1567676252671" duration="5047000" />
-      <workItem from="1567832761325" duration="7623000" />
+      <workItem from="1567832761325" duration="8272000" />
     </task>
     <servers />
   </component>
