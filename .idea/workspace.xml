@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e5691449-f57d-4c6d-bd9a-d9eace4eaaa7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QinHeShu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QinHeShu.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +82,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BinarySearch">
+  <component name="RunManager" selected="Application.PrimeNumber">
     <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BinarySearch" />
       <module name="leetcode" />
@@ -89,15 +90,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MergeSortedArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MergeSortedArray" />
+    <configuration name="MissingNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MissingNumbers" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MissingNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MissingNumbers" />
+    <configuration name="PrimeNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PrimeNumber" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -125,18 +126,18 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.MergeSortedArray" />
       <item itemvalue="Application.QinHeShu" />
       <item itemvalue="Application.TwoSumSortedArray" />
       <item itemvalue="Application.MissingNumbers" />
       <item itemvalue="Application.BinarySearch" />
+      <item itemvalue="Application.PrimeNumber" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PrimeNumber" />
         <item itemvalue="Application.BinarySearch" />
         <item itemvalue="Application.MissingNumbers" />
         <item itemvalue="Application.TwoSumSortedArray" />
-        <item itemvalue="Application.QinHeShu" />
         <item itemvalue="Application.QinHeShu" />
       </list>
     </recent_temporary>
@@ -169,7 +170,7 @@
       <workItem from="1567665091115" duration="4148000" />
       <workItem from="1567670958863" duration="575000" />
       <workItem from="1567676252671" duration="5047000" />
-      <workItem from="1567832761325" duration="1252000" />
+      <workItem from="1567832761325" duration="2383000" />
     </task>
     <servers />
   </component>
@@ -190,6 +191,15 @@
     </option>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/PrimeNumber.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="head" />

@@ -1,6 +1,6 @@
 /**
  * @author 苏若墨
- * 问题：找出10000以下的亲和数
+ * 问题：找出10000以下的亲和数（两个数互为对方因子之和）
  */
 public class QinHeShu {
     public static void main(String[] args) {
