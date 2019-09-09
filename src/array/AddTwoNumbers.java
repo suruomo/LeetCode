@@ -29,6 +29,7 @@ class AddTwoNumbers {
             }
 
         }
+        //下一位数字为当前运算的进位
         if (carry > 0) {
             curr.next = new ListNode(carry);
         }
