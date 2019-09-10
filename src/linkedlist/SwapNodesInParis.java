@@ -1,4 +1,4 @@
-package array;
+package linkedlist;
 
 /**
  * 问题：Given a linked list, swap every two adjacent nodes and return its head.

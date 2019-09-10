@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5691449-f57d-4c6d-bd9a-d9eace4eaaa7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/linkedlist/SwapNodesInParis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/array/AddTwoNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/AddTwoNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Array/SwapNodesInParis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/array/RemoveNthNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/linkedlist/RemoveNthNode.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +110,7 @@
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="array.*" />
+          <option name="PATTERN" value="linkedlist.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,7 +130,7 @@
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="array.*" />
+          <option name="PATTERN" value="linkedlist.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -185,7 +187,7 @@
       <workItem from="1567926759994" duration="2400000" />
       <workItem from="1567930491743" duration="1589000" />
       <workItem from="1567950353833" duration="6599000" />
-      <workItem from="1568030748549" duration="1439000" />
+      <workItem from="1568030748549" duration="4565000" />
     </task>
     <servers />
   </component>
