@@ -81,7 +81,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.HouseRobber">
+  <component name="RunManager" selected="Application.Fibonacci">
     <configuration name="ClimbStairs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dynamicplanning.ClimbStairs" />
       <module name="leetcode" />
@@ -101,6 +101,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="factorial.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Fibonacci" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dynamicplanning.Fibonacci" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dynamicplanning.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,33 +147,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThirdMaxNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="array.ThirdMaxNumber" />
-      <module name="leetcode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="linkedlist.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.ThirdMaxNumber" />
       <item itemvalue="Application.FactorialTrailingZeroes" />
       <item itemvalue="Application.KDiffParis" />
       <item itemvalue="Application.ClimbStairs" />
       <item itemvalue="Application.HouseRobber" />
+      <item itemvalue="Application.Fibonacci" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Fibonacci" />
         <item itemvalue="Application.HouseRobber" />
         <item itemvalue="Application.ClimbStairs" />
         <item itemvalue="Application.KDiffParis" />
         <item itemvalue="Application.FactorialTrailingZeroes" />
-        <item itemvalue="Application.ThirdMaxNumber" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +201,7 @@
       <workItem from="1568276785235" duration="597000" />
       <workItem from="1568622298396" duration="2357000" />
       <workItem from="1568680387278" duration="120000" />
-      <workItem from="1568797921012" duration="2221000" />
+      <workItem from="1568797921012" duration="3076000" />
     </task>
     <servers />
   </component>
