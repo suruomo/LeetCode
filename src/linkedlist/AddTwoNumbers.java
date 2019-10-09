@@ -1,4 +1,4 @@
-package array;
+package linkedlist;
 
 /**
  * @author 苏若墨
