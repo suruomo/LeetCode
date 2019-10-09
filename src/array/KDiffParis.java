@@ -1,4 +1,5 @@
 package array;
+
 import java.util.*;
 
 /**
@@ -10,28 +11,26 @@ import java.util.*;
  */
 public class KDiffParis {
     public static void main(String[] args) {
-        int[]nums={1,3,1,5,4};
-        int k=0;
-        diffParis(nums,k);
+        int[] nums = {1, 3, 1, 5, 4};
+        int k = 0;
+        diffParis(nums, k);
     }
 
     private static void diffParis(int[] nums, int k) {
-        if(k<0){
+        if (k < 0) {
             System.out.print("0");
         }
         //存储已经遍历过的数字
-        Set<Integer> haved=new HashSet<>();
+        Set<Integer> haved = new HashSet<>();
         //存储符合条件一堆数字中的较小数字
-        Set<Integer> c=new HashSet<>();
-        for(int num:nums){
-            if(haved.contains(num+k)){
+        Set<Integer> c = new HashSet<>();
+        for (int num : nums) {
+            if (haved.contains(num + k)) {
                 c.add(num);
-            }
-            else if(haved.contains(num-k)){
-                c.add(num-k);
-            }
-            else if(haved.contains(num-k)&&haved.contains(num+k)){
-                c.add(num-k);
+            } else if (haved.contains(num - k)) {
+                c.add(num - k);
+            } else if (haved.contains(num - k) && haved.contains(num + k)) {
+                c.add(num - k);
                 c.add(num);
             }
             haved.add(num);

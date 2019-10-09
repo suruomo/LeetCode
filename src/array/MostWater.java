@@ -7,16 +7,16 @@ package array;
  */
 public class MostWater {
     public static void main(String[] args) {
-        int t[]={1,8,6,2,5,4,8,3,7};
-        int max=0;
-        for(int i=0;i<t.length;i++){
-            for(int j=i+1;j<t.length;j++){
-                int result=Math.abs(i - j) * Math.min(t[i], t[j]);
-                if(result>=max){
-                     max=result;
+        int t[] = {1, 8, 6, 2, 5, 4, 8, 3, 7};
+        int max = 0;
+        for (int i = 0; i < t.length; i++) {
+            for (int j = i + 1; j < t.length; j++) {
+                int result = Math.abs(i - j) * Math.min(t[i], t[j]);
+                if (result >= max) {
+                    max = result;
                 }
             }
         }
-        System.out.println("可承受的最大水量是："+max);
+        System.out.println("可承受的最大水量是：" + max);
     }
 }

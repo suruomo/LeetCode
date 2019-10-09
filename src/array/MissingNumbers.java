@@ -11,9 +11,9 @@ import java.util.Set;
  */
 public class MissingNumbers {
     public static void main(String[] args) {
-        int[] nums={3,0,1};
-        System.out.println("排序法："+miss(nums));
-        System.out.println("哈希法："+hashMiss(nums));
+        int[] nums = {3, 0, 1};
+        System.out.println("排序法：" + miss(nums));
+        System.out.println("哈希法：" + hashMiss(nums));
     }
 
     private static int hashMiss(int[] nums) {
@@ -32,20 +32,18 @@ public class MissingNumbers {
 
     private static int miss(int[] nums) {
         Arrays.sort(nums);
-        if(nums.length==1&&nums[0]==0){
+        if (nums.length == 1 && nums[0] == 0) {
             return 1;
-        }
-        else if(nums.length==1&&nums[0]==1){
+        } else if (nums.length == 1 && nums[0] == 1) {
+            return 0;
+        } else if (nums[0] != 0 && nums.length != 1) {
             return 0;
         }
-        else if(nums[0]!=0&&nums.length!=1){
-            return 0;
-        }
-        for(int i=0;i<nums.length-1;i++){
-            if(nums[i]+1!=nums[i+1]){
-                return nums[i]+1;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] + 1 != nums[i + 1]) {
+                return nums[i] + 1;
             }
         }
-        return nums[nums.length-1]+1;
+        return nums[nums.length - 1] + 1;
     }
 }

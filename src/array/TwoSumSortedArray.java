@@ -7,9 +7,9 @@ package array;
  */
 public class TwoSumSortedArray {
     public static void main(String[] args) {
-        int[] numbers={2,3,5,6,7,9};
-        int target=9;
-        twoSum(numbers,target);
+        int[] numbers = {2, 3, 5, 6, 7, 9};
+        int target = 9;
+        twoSum(numbers, target);
     }
 
     private static void twoSum(int[] numbers, int target) {
@@ -18,7 +18,7 @@ public class TwoSumSortedArray {
         while (left < right) {
             int sum = numbers[left] + numbers[right];
             if (sum == target) {
-                System.out.println("下标是："+(left+1)+","+(right+1));
+                System.out.println("下标是：" + (left + 1) + "," + (right + 1));
                 return;
             } else if (sum > target) {
                 right--;

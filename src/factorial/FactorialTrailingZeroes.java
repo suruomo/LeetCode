@@ -6,7 +6,7 @@ package factorial;
  */
 public class FactorialTrailingZeroes {
     public static void main(String[] args) {
-        int num=3;
+        int num = 3;
         System.out.println(findZeros(num));
     }
 

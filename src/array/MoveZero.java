@@ -7,23 +7,22 @@ package array;
  */
 public class MoveZero {
     public static void main(String[] args) {
-         int[] nums={0,1,0,3,12};
-         moveZero(nums);
+        int[] nums = {0, 1, 0, 3, 12};
+        moveZero(nums);
     }
 
     private static void moveZero(int[] nums) {
-        int q=0,cur=0;
-        while(cur<nums.length){
-            if(nums[cur]!=0){
-                nums[q++]=nums[cur++];
-            }
-            else{
+        int q = 0, cur = 0;
+        while (cur < nums.length) {
+            if (nums[cur] != 0) {
+                nums[q++] = nums[cur++];
+            } else {
                 cur++;
             }
         }
-       while(q<nums.length){
-           nums[q++]=0;
-       }
+        while (q < nums.length) {
+            nums[q++] = 0;
+        }
     }
 
 }

@@ -8,21 +8,20 @@ package array;
  * 如果 sum <= 0，则说明 sum 对结果无增益效果，需要舍弃，则 sum 直接更新为当前遍历数字
  * 每次比较 sum 和 ans的大小，将最大值置为ans，遍历结束返回结果
  * 时间复杂度：O(n)O(n)
- *
  */
 public class MaxSubArray {
     public static void main(String[] args) {
-        int[] nums={-2,1,-3,4,-1,2,1,-5,4};
-        int ans=0;
-        ans=findMaxSum(nums);
-        System.out.println("最大子串和是："+ans);
+        int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        int ans = 0;
+        ans = findMaxSum(nums);
+        System.out.println("最大子串和是：" + ans);
     }
 
     private static int findMaxSum(int[] nums) {
         int ans = nums[0];
         int sum = 0;
-        for(int num: nums) {
-            if(sum > 0) {
+        for (int num : nums) {
+            if (sum > 0) {
                 sum += num;
             } else {
                 sum = num;

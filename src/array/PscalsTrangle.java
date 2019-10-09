@@ -12,9 +12,9 @@ import java.util.Scanner;
  */
 public class PscalsTrangle {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("请输入杨辉三角的行数：");
-        int numRows=sc.nextInt();
+        int numRows = sc.nextInt();
         generate(numRows);
     }
 
@@ -31,7 +31,7 @@ public class PscalsTrangle {
 
         for (int rowNum = 1; rowNum < numRows; rowNum++) {
             List<Integer> row = new ArrayList<>();
-            List<Integer> prevRow = triangle.get(rowNum-1);
+            List<Integer> prevRow = triangle.get(rowNum - 1);
 
             // The first row element is always 1.
             row.add(1);
@@ -40,7 +40,7 @@ public class PscalsTrangle {
             // is equal to the sum of the elements above-and-to-the-left and
             // above-and-to-the-right.
             for (int j = 1; j < rowNum; j++) {
-                row.add(prevRow.get(j-1) + prevRow.get(j));
+                row.add(prevRow.get(j - 1) + prevRow.get(j));
             }
 
             // The last row element is always 1.

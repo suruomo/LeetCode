@@ -3,8 +3,9 @@ package array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 /**
-*@author 苏若墨
+ * @author 苏若墨
  * 问题：Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0?
  * Find all unique triplets in the array which gives the sum of zero.
  * 思路：我们采用`分治`的思想. 想要找出三个数相加等于0，我们可以数组依次遍历，
@@ -14,7 +15,7 @@ import java.util.List;
  */
 public class ThreeSum {
     public static void main(String[] args) {
-        int[] nums={-1, 0, 1, 2, -1, -4};
+        int[] nums = {-1, 0, 1, 2, -1, -4};
         threeSum1(nums);
         System.out.println(threeSum2(nums));
     }
@@ -23,40 +24,38 @@ public class ThreeSum {
         List<List<Integer>> ans = new ArrayList();
         int len = nums.length;
         //若数组为空或者数组长度小于3，返回空
-        if(nums == null || len < 3) {
+        if (nums == null || len < 3) {
             return null;
         }
         // 数组排序
         Arrays.sort(nums);
-        for (int i = 0; i < len ; i++) {
-            if(nums[i] > 0) {
+        for (int i = 0; i < len; i++) {
+            if (nums[i] > 0) {
                 // 如果当前数字大于0，则三数之和一定大于0，所以结束循环
                 break;
             }
-            if(i > 0 && nums[i] == nums[i-1]) {
+            if (i > 0 && nums[i] == nums[i - 1]) {
                 // 去重
                 continue;
             }
             //设置两个左右指针向中间移动
-            int L = i+1;
-            int R = len-1;
-            while(L < R){
+            int L = i + 1;
+            int R = len - 1;
+            while (L < R) {
                 int sum = nums[i] + nums[L] + nums[R];
-                if(sum == 0){
-                    ans.add(Arrays.asList(nums[i],nums[L],nums[R]));
-                    while (L<R && nums[L] == nums[L+1]) {
+                if (sum == 0) {
+                    ans.add(Arrays.asList(nums[i], nums[L], nums[R]));
+                    while (L < R && nums[L] == nums[L + 1]) {
                         L++; // 去重
                     }
-                    while (L<R && nums[R] == nums[R-1]) {
+                    while (L < R && nums[R] == nums[R - 1]) {
                         R--; // 去重
                     }
                     L++;
                     R--;
-                }
-                else if (sum < 0) {
+                } else if (sum < 0) {
                     L++;
-                }
-                else if (sum > 0) {
+                } else if (sum > 0) {
                     R--;
                 }
             }
@@ -105,10 +104,10 @@ public class ThreeSum {
             }
         }
         System.out.println("[");
-        for(int i=0;i<ls.size();i++){
+        for (int i = 0; i < ls.size(); i++) {
             System.out.print("[");
-            for(int j=0;j<3;j++){
-                System.out.print(ls.get(i).get(j)+",");
+            for (int j = 0; j < 3; j++) {
+                System.out.print(ls.get(i).get(j) + ",");
             }
             System.out.println("]");
         }

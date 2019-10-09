@@ -6,22 +6,22 @@ package array;
  */
 public class PrimeNumber {
     public static void main(String[] args) {
-        int n=10000;
+        int n = 10000;
         findPrimeNUmber(n);
     }
 
     private static void findPrimeNUmber(int n) {
-        int j=1;
+        int j = 1;
         boolean flag;
-        for(int i=2;i<n;i++){
-            flag=true;
-            for(j=2;j<=Math.sqrt(i);j++){
-                if(i%j==0){
-                    flag=false;
+        for (int i = 2; i < n; i++) {
+            flag = true;
+            for (j = 2; j <= Math.sqrt(i); j++) {
+                if (i % j == 0) {
+                    flag = false;
                     break;
                 }
             }
-            if(flag){
+            if (flag) {
                 System.out.println(i);
             }
         }

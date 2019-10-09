@@ -7,24 +7,25 @@ import java.util.Arrays;
  */
 public class VaildAnagram {
     public static void main(String[] args) {
-        String s="anagram";
-        String t="nagaram";
-        System.out.println(isAnagram(s,t));
-        System.out.println(hashAnagram(s,t));
+        String s = "anagram";
+        String t = "nagaram";
+        System.out.println(isAnagram(s, t));
+        System.out.println(hashAnagram(s, t));
     }
 
     /**
      * 排序
+     *
      * @param s
      * @param t
      * @return
      */
     private static boolean isAnagram(String s, String t) {
-        if(s.length()!=t.length()){
+        if (s.length() != t.length()) {
             return false;
         }
-        char[] chars=s.toCharArray();
-        char[] chars1=t.toCharArray();
+        char[] chars = s.toCharArray();
+        char[] chars1 = t.toCharArray();
         Arrays.sort(chars);
         Arrays.sort(chars1);
         return Arrays.equals(chars, chars1);
@@ -32,11 +33,12 @@ public class VaildAnagram {
 
     /**
      * 哈希法：用一个计数器表计算 s 字母的频率，用 t减少计数器表中的每个字母的计数器，然后检查计数器是否回到零。
+     *
      * @param s
      * @param t
      * @return
      */
-    private static boolean hashAnagram(String s,String t){
+    private static boolean hashAnagram(String s, String t) {
         if (s.length() != t.length()) {
             return false;
         }
