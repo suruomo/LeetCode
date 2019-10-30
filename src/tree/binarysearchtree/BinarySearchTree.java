@@ -65,6 +65,24 @@ public class BinarySearchTree{
         return root;
     }
 
-
+    /**
+     * 插入某个值x
+     * @param x 待插入值x
+     * @param root  待插入树根节点
+     * @return  fan'hui
+     */
+    public BinaryNode insert(int x,BinaryNode root){
+        if(root==null){
+            return new BinaryNode(x,null,null);
+        }
+        int compareResult=root.compareTo(x);
+        if(compareResult<0){
+            return  insert(x,root.getRight());
+    }
+        else if(compareResult>0){
+            return  insert(x,root.getLeft());
+        }
+        return root;
+    }
 
 }

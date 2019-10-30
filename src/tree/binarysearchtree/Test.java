@@ -17,6 +17,8 @@ public class Test {
         System.out.println(binarySearchTree.contains(1,node1));
         System.out.println("最小节点值："+binarySearchTree.findMin(node1).getData());
         System.out.println("最大节点值："+binarySearchTree.findMax(node1).getData());
-
+        System.out.println("插入结点值7...");
+        node1=binarySearchTree.insert(7,node1);
+        System.out.println(binarySearchTree.contains(7,node1));
     }
 }
