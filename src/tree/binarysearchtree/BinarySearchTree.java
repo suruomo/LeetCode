@@ -69,7 +69,7 @@ public class BinarySearchTree{
      * 插入某个值x
      * @param x 待插入值x
      * @param root  待插入树根节点
-     * @return  fan'hui
+     * @return  返回新树根节点
      */
     public BinaryNode insert(int x,BinaryNode root){
         if(root==null){
@@ -77,10 +77,56 @@ public class BinarySearchTree{
         }
         int compareResult=root.compareTo(x);
         if(compareResult<0){
-            return  insert(x,root.getRight());
+           root.setRight(insert(x,root.getRight()));
     }
         else if(compareResult>0){
-            return  insert(x,root.getLeft());
+            root.setLeft(insert(x,root.getLeft()));
+        }
+        return root;
+    }
+
+    /**
+     * 递归中序遍历
+     * @param root
+     */
+    public void inOrder(BinaryNode root){
+        if(root!=null){
+            inOrder(root.getLeft());
+            System.out.print(root.getData()+"\t");
+            inOrder(root.getRight());
+        }
+    }
+
+    /**
+     * 删除值为x的某节点
+     * @param x 待删除结点值x
+     * @param root 待删除树根节点
+     * @return  返回删除节点后的新树根结点
+     */
+    public BinaryNode remove(int x,BinaryNode root){
+        if(root==null){
+            return null;
+        }
+        int compareResult=root.compareTo(x);
+        //若待删除元素值大于当前节点，去右子树删除
+        if(compareResult<0){
+           root.setRight(remove(x,root.getRight()));
+        }
+        else{
+            //若待删除元素值小于当前节点，去左子树删除
+            if(compareResult>0){
+                root.setLeft(remove(x,root.getLeft()));
+            }
+            //否则待删除元素就是当前结点
+            //当该结点有两个孩子时，令当前结点值为其右子树最小结点值，然后删除其右子树自小结点
+            else if(root.getLeft()!=null&&root.getRight()!=null){
+                root.setData(findMin(root.getRight()).getData());
+                root.setRight(remove(root.getData(),root.getRight()));
+            }
+            //当前结点只有左孩子或者只有右孩子
+            else{
+                root=(root.getLeft()!=null)?root.getLeft():root.getRight();
+            }
         }
         return root;
     }

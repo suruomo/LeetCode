@@ -13,12 +13,19 @@ public class Test {
         BinaryNode node3=new BinaryNode(9,node7,node6);
         BinaryNode node1=new BinaryNode(6,node3,node2);
         BinarySearchTree binarySearchTree=new BinarySearchTree(node1);
+        System.out.println("初始树中序遍历：");
+        binarySearchTree.inOrder(node1);
         System.out.println("查找1是否存在：");
         System.out.println(binarySearchTree.contains(1,node1));
         System.out.println("最小节点值："+binarySearchTree.findMin(node1).getData());
         System.out.println("最大节点值："+binarySearchTree.findMax(node1).getData());
         System.out.println("插入结点值7...");
         node1=binarySearchTree.insert(7,node1);
+        binarySearchTree.inOrder(node1);
+        System.out.println(binarySearchTree.contains(7,node1));
+        System.out.println("删除结点值7...");
+        node1=binarySearchTree.remove(7,node1);
+        binarySearchTree.inOrder(node1);
         System.out.println(binarySearchTree.contains(7,node1));
     }
 }
