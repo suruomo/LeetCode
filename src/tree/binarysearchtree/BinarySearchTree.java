@@ -97,12 +97,15 @@ public class BinarySearchTree{
         }
     }
 
+<<<<<<< HEAD
     /**
      * 删除值为x的某节点
      * @param x 待删除结点值x
      * @param root 待删除树根节点
      * @return  返回删除节点后的新树根结点
      */
+=======
+>>>>>>> master
     public BinaryNode remove(int x,BinaryNode root){
         if(root==null){
             return null;
