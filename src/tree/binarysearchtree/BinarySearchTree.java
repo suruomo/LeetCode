@@ -12,6 +12,7 @@ public class BinarySearchTree{
 
     /**
      * 判断二叉树中是否包含某节点
+     * 递归
      * @param x
      * @param root
      * @return
@@ -31,6 +32,37 @@ public class BinarySearchTree{
             return contains(x,root.getLeft());
         }
         return true;
+    }
+
+    /**
+     * 查找最小节点：即最左子节点
+     * 递归
+     * @param root
+     * @return
+     */
+    public BinaryNode findMin(BinaryNode root){
+        if(root==null){
+            return null;
+        }
+        else  if(root.getLeft()==null){
+            return root;
+        }
+        return findMin(root.getLeft());
+    }
+
+    /**
+     * 查找最大节点：即最右子节点
+     * 非递归
+     * @param root
+     * @return
+     */
+    public BinaryNode findMax(BinaryNode root){
+        if(root!=null){
+            while(root.getRight()!=null){
+                root=root.getRight();
+            }
+        }
+        return root;
     }
 
 

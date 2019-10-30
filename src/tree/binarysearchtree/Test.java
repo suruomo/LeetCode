@@ -13,6 +13,10 @@ public class Test {
         BinaryNode node3=new BinaryNode(9,node7,node6);
         BinaryNode node1=new BinaryNode(6,node3,node2);
         BinarySearchTree binarySearchTree=new BinarySearchTree(node1);
+        System.out.println("查找1是否存在：");
         System.out.println(binarySearchTree.contains(1,node1));
+        System.out.println("最小节点值："+binarySearchTree.findMin(node1).getData());
+        System.out.println("最大节点值："+binarySearchTree.findMax(node1).getData());
+
     }
 }
