@@ -97,15 +97,14 @@ public class BinarySearchTree{
         }
     }
 
-<<<<<<< HEAD
+
     /**
      * 删除值为x的某节点
      * @param x 待删除结点值x
      * @param root 待删除树根节点
      * @return  返回删除节点后的新树根结点
      */
-=======
->>>>>>> master
+
     public BinaryNode remove(int x,BinaryNode root){
         if(root==null){
             return null;
@@ -133,5 +132,20 @@ public class BinarySearchTree{
         }
         return root;
     }
+
+    /**
+     * 返回BST的最大深度
+     * @param root
+     * @return
+     */
+    public int maxDepth(BinaryNode root){
+        if(root!=null){
+            int left=maxDepth(root.getLeft());
+            int right=maxDepth(root.getRight());
+            return (left>right?left:right)+1;
+        }
+        return 0;
+    }
+
 
 }

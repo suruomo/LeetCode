@@ -1,4 +1,4 @@
-package array;
+package search;
 
 /**
  * @author 苏若墨

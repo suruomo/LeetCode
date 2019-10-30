@@ -27,5 +27,6 @@ public class Test {
         node1=binarySearchTree.remove(7,node1);
         binarySearchTree.inOrder(node1);
         System.out.println(binarySearchTree.contains(7,node1));
+        System.out.println("BST的最大深度是："+binarySearchTree.maxDepth(node1));
     }
 }
