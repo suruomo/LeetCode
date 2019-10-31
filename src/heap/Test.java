@@ -12,5 +12,7 @@ public class Test {
         }
         System.out.println(h.getCurrentSize());
         System.out.println(h.getList());
+        h.deleteMin();
+        System.out.println(h.getList());
     }
 }
