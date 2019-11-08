@@ -21,7 +21,7 @@ public class Test {
         graph.addNode(C, F);
 
         ToPo toPo=new ToPo(graph);
-        toPo.process();
+        toPo.kahn();
         for(Node temp : toPo.getResult()){
             System.out.print(temp.getVal().toString() + "-->");
         }

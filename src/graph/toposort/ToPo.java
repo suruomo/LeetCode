@@ -24,9 +24,10 @@ public class ToPo {
     }
 
     /**
-     * 拓扑排序处理算法
+     * 实现：
+     * Kahn拓扑排序处理算法
      */
-    public  void process(){
+    public  void kahn(){
         //当入度为0的结点队列不为空时循环
         while (!setZeroInDegree.isEmpty()){
             //出队：返回一个入度为0的结点，加入结果集中
