@@ -23,6 +23,8 @@ public class Test {
         System.out.println();
         System.out.println("DFS非递归遍历：");
         graph.DFS();
-
+        System.out.println();
+        System.out.println("BFS遍历：");
+        graph.BFS();
     }
 }

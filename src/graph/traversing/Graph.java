@@ -1,5 +1,7 @@
 package graph.traversing;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -108,6 +110,41 @@ public class Graph {
 
         }
     }
+
+
+
+    /**
+     * 广度优先遍历算法 Breadth-first search（非递归）
+     */
+    public void BFS() {
+        // LinkedList实现了Queue接口 FIFO
+        Queue<Integer> queue = new LinkedList<Integer>();
+        boolean[] visited=new boolean[vertex.length];
+        for (int i = 0; i < vertex.length; i++) {
+            visited[i] = false;
+        }
+
+        //这个循环是为了确保每个顶点都被遍历到
+        for (int i = 0; i < vertex.length; i++) {
+            if (!visited[i]) {
+                queue.add(i);
+                visited[i] = true;
+                System.out.print(vertex[i] + "-->");
+                while (!queue.isEmpty()) {
+                    int row = queue.remove();
+                    for (int k = firstVertex(row); k >= 0; k = nextVertex(row, k)) {
+                        if (!visited[k]) {
+                            queue.add(k);
+                            visited[k] = true;
+                            System.out.print(vertex[k] + "-->");
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
 
 }
 
