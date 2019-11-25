@@ -16,7 +16,7 @@ public class IntegerDivision {
     }
 
     private static int division(int n, int m) {
-        if((n<1)||(m<1)) {
+        if((n==1)||(m==1)) {
             return 1;
         }
         if(n<m){
