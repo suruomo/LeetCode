@@ -1,6 +1,6 @@
 package tree.traversing;
 
-import java.util.Stack;
+import java.util.*;
 
 /**
  * @author 苏若墨
@@ -82,6 +82,10 @@ public class BinaryTree {
         }
     }
 
+    /**
+     * 后序遍历非递归版
+     * @param root
+     */
     public void postOrderNonRecursive(BinaryTreeNode root){
         Stack<BinaryTreeNode> stack=new Stack<>();
         //cur:当前访问节点，pre:上次访问节点
@@ -112,4 +116,53 @@ public class BinaryTree {
             }
         }
     }
+
+    /**
+     * 层次遍历
+     * @param root
+     */
+    public List hierarchicalTraversal(BinaryTreeNode root){
+        if(root==null){
+            return new ArrayList<Integer>();
+        }
+        Queue<BinaryTreeNode> queue=new LinkedList<>();
+        List<Integer> list=new ArrayList<>();
+        queue.offer(root);
+        while(!queue.isEmpty()){
+            BinaryTreeNode node=queue.poll();
+            list.add(node.getData());
+            if(node.getLeft()!=null){
+                queue.offer(node.getLeft());
+            }
+            if(node.getRight()!=null){
+                queue.offer(node.getRight());
+            }
+        }
+        return list;
+    }
+    /**
+     * 判断二叉树是否对称
+     */
+    public boolean isSymmetric(BinaryTreeNode root) {
+        return isMirror(root, root);
+    }
+
+    /**
+     * 判断对称
+     * @param t1
+     * @param t2
+     * @return
+     */
+    public boolean isMirror(BinaryTreeNode t1, BinaryTreeNode t2) {
+        if (t1 == null && t2 == null) {
+            return true;
+        }
+        if (t1 == null || t2 == null) {
+            return false;
+        }
+        return (t1.getData() == t2.getData())
+                && isMirror(t1.getRight(), t2.getLeft())
+                && isMirror(t1.getLeft(), t2.getRight());
+    }
+
 }

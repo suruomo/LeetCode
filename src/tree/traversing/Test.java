@@ -1,7 +1,5 @@
 package tree.traversing;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-
 /**
  * @author 苏若墨
  */
@@ -35,5 +33,10 @@ public class Test {
         System.out.println();
         System.out.println("后序遍历非递归版");
         binaryTree.postOrderNonRecursive(node1);
+        System.out.println();
+        System.out.println("层次遍历");
+        binaryTree.hierarchicalTraversal(node1);
+        System.out.println("二叉树是否对称："+binaryTree.isSymmetric(node1));
+
     }
 }
