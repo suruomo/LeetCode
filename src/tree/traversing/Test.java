@@ -1,5 +1,7 @@
 package tree.traversing;
 
+import java.util.List;
+
 /**
  * @author 苏若墨
  */
@@ -35,7 +37,10 @@ public class Test {
         binaryTree.postOrderNonRecursive(node1);
         System.out.println();
         System.out.println("层次遍历");
-        binaryTree.hierarchicalTraversal(node1);
+        List<Integer> list=binaryTree.hierarchicalTraversal(node1);
+        System.out.println(list);
+        System.out.println("层次遍历按层打印");
+        binaryTree.printByHierarchically(node1);
         System.out.println("二叉树是否对称："+binaryTree.isSymmetric(node1));
 
     }
