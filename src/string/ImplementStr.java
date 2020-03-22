@@ -7,7 +7,7 @@ package string;
  *
  * @author 苏若墨
  */
-public class implementStr {
+public class ImplementStr {
     public static void main(String[] args) {
         String haystack = "hello";
         String needle = "ll";
