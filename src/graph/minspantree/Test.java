@@ -3,7 +3,7 @@ package graph.minspantree;
 /**
  * @author 苏若墨
  */
-public class Text {
+public class Test {
     public static void main(String[] args) {
         final int INF = Integer.MAX_VALUE;
         char[] vertex = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
