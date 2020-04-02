@@ -14,12 +14,8 @@ import java.util.Stack;
  * @author 苏若墨
  */
 public class IsValid {
-    public static void main(String[] args) {
-        String s="";
-        System.out.println(isValid(s));
-    }
 
-    private static boolean isValid(String s) {
+    public  boolean isValid(String s) {
         if (s == null || s.length() == 0) {
             return true;
         }
