@@ -149,6 +149,36 @@ public class BinaryTree {
     }
 
     /**
+     * 层次遍历结点，并且自底向上按层返回
+     * @param root
+     * @return
+     */
+     public List<List<Integer>> returnHierarchically(BinaryTreeNode root){
+         LinkedList<List<Integer>> lists=new LinkedList<>();
+         if(root==null){
+             return lists;
+         }
+         Queue<BinaryTreeNode> queue=new LinkedList<>();
+         queue.offer(root);
+         while ((!queue.isEmpty())){
+             List<Integer> list=new ArrayList<>();
+             for(int i=0;i<queue.size();i++){
+                 BinaryTreeNode node = queue.poll();
+                 list.add(node.getData());
+                 if (node.getLeft() != null) {
+                     queue.offer(node.getLeft());
+                 }
+                 if (node.getRight() != null) {
+                     queue.offer(node.getRight());
+                 }
+             }
+//             遍历一层，将列表插入首位
+             lists.offerFirst(list);
+         }
+         return lists;
+     }
+
+    /**
      * 层次遍历：按层打印
      */
     public void printByHierarchically(BinaryTreeNode root) {
