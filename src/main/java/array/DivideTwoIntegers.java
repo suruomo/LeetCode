@@ -13,8 +13,8 @@ import java.util.Scanner;
  */
 public class DivideTwoIntegers {
     public static void main(String[] args) {
-        int dividend, divisor;   //除数，被除数
-        System.out.println("请输入除数和被除数：");
+        int dividend, divisor;   //被除数，除数
+        System.out.println("请输入被除数和除数：");
         Scanner sc = new Scanner(System.in);
         dividend = sc.nextInt();
         divisor = sc.nextInt();
