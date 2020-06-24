@@ -5,7 +5,7 @@ package heap;
  */
 public class Test {
     public static void main(String[] args) {
-        Heap<Integer> h=new Heap("空白位");
+        Heap<Integer> h=new Heap(000);
         int[] nums={3,7,1,6,2,9,0};
         for(int i=0;i<nums.length;i++){
             h.insert(nums[i]);

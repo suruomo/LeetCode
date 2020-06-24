@@ -43,7 +43,7 @@ public class Heap<T extends Comparable<? super T>> {
             list.add(hole,x);
         }
         else{
-            list.set(hole,x);
+        list.set(hole,x);
         }
         System.out.println("当前插入值"+x+"的位置下标："+hole);
     }
