@@ -1,13 +1,11 @@
 package graph.minspantree;
 
-
-
 /**
- * 最小生成树：Prim和Kruskal算法实现
+ * 最小生成树Prim算法实现
  *
  * @author 苏若墨
  */
-public class Graph {
+public class Prim {
     /**
      * 顶点集合
      */
@@ -27,7 +25,7 @@ public class Graph {
      * @param vertex
      * @param matrix
      */
-    public Graph(char[] vertex, int[][] matrix) {
+    public Prim(char[] vertex, int[][] matrix) {
         this.vertex = vertex;
         this.matrix = matrix;
     }
@@ -95,7 +93,8 @@ public class Graph {
         char[] prim = new char[num];
         // 顶点间边的权值
         int[] weights = new int[num];
-
+        //最小生成树权值
+        int sum=0;
         // prim最小生成树中第一个数是"图中第start个顶点"，因为是从start开始的。
         prim[index++] = vertex[start];
 
@@ -124,7 +123,8 @@ public class Graph {
                     minVertex = j;
                 }
             }
-
+            //更新权值
+          sum+=minWeight;
             // 经过上面的处理后，在未被加入到最小生成树的顶点中，权值最小的顶点是第k个顶点。
             // 将第k个顶点加入到最小生成树的结果数组中
             prim[index++] = vertex[minVertex];
@@ -138,23 +138,6 @@ public class Graph {
                 }
             }
         }
-
-        // 计算最小生成树的权值
-        int sum = 0;
-        for (int i = 1; i < index; i++) {
-            int min = INF;
-            // 获取prim[i]在vertex中的位置
-            int dex = getPosition(prim[i]);
-            // 找出到j的权值最小的顶点。
-            for (int j = 0; j < i; j++) {
-                int m = getPosition(prim[j]);
-                if (matrix[m][dex] < min) {
-                    min = matrix[m][dex];
-                }
-            }
-            sum += min;
-        }
-
         // 打印最小生成树
         System.out.printf("PRIM(%c)=%d: ", vertex[start], sum);
         for (int i = 0; i < index; i++) {
@@ -162,7 +145,5 @@ public class Graph {
         }
         System.out.printf("\n");
     }
-
-
 }
 

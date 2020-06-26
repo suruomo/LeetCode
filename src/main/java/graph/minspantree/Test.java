@@ -8,7 +8,7 @@ public class Test {
         final int INF = Integer.MAX_VALUE;
         char[] vertex = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
         int[][] matrix = {
-                /*A*//*B*//*C*//*D*//*E*//*F*//*G*/
+                          /*A*//*B*//*C*//*D*//*E*//*F*//*G*/
                 /*A*/ {   0,  12, INF, INF, INF,  16,  14},
                 /*B*/ {  12,   0,  10, INF, INF,   7, INF},
                 /*C*/ { INF,  10,   0,   3,   5,   6, INF},
@@ -16,7 +16,8 @@ public class Test {
                 /*E*/ { INF, INF,   5,   4,   0,   2,   8},
                 /*F*/ {  16,   7,   6, INF,   2,   0,   9},
                 /*G*/ {  14, INF, INF, INF,   8,   9,   0}};
-        Graph graph=new Graph(vertex,matrix);
+        //Prim算法
+        Prim graph=new Prim(vertex,matrix);
         graph.prim(0);
     }
 }
