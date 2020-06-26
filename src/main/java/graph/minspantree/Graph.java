@@ -1,11 +1,15 @@
 package graph.minspantree;
 
 /**
- * 最小生成树Prim算法实现
+ * 最小生成树Prim和Kruskal算法实现
  *
  * @author 苏若墨
  */
-public class Prim {
+public class Graph {
+    /**
+     * 边的数量
+     */
+    private int edgeNum=0;
     /**
      * 顶点集合
      */
@@ -25,9 +29,17 @@ public class Prim {
      * @param vertex
      * @param matrix
      */
-    public Prim(char[] vertex, int[][] matrix) {
+    public Graph(char[] vertex, int[][] matrix) {
         this.vertex = vertex;
         this.matrix = matrix;
+        //统计边,矩阵对称
+        for (int i = 0; i < vertex.length; i++) {
+            for (int j = i+1; j < vertex.length; j++) {
+                if (matrix[i][j]!=INF) {
+                    edgeNum++;
+                }
+            }
+        }
     }
 
     /**
@@ -79,8 +91,7 @@ public class Prim {
     }
 
     /**
-     * prim最小生成树
-     * <p>
+     * Prim最小生成树
      * 参数说明：
      * start -- 从图中的第start个元素开始，生成最小树
      */
@@ -144,6 +155,101 @@ public class Prim {
             System.out.printf("%c ", prim[i]);
         }
         System.out.printf("\n");
+    }
+    /**
+     * 边的结构体
+     */
+    private static class EData{
+        char start; // 边的起点
+        char end;   // 边的终点
+        int weight; // 边的权重
+
+        public EData(char start, char end, int weight) {
+            this.start = start;
+            this.end = end;
+            this.weight = weight;
+        }
+    }
+
+    /**
+     * 对边按照权值大小进行排序(由小到大)
+     */
+    private void sortEdges(EData[] edges, int length) {
+        for (int i=0; i<length; i++) {
+            for (int j=i+1; j<length; j++) {
+                if (edges[i].weight > edges[j].weight) {
+                    // 交换"边i"和"边j"
+                    EData tmp = edges[i];
+                    edges[i] = edges[j];
+                    edges[j] = tmp;
+                }
+            }
+        }
+    }
+    /**
+     * 获取i的终点(重要！！！）
+     */
+    private int getEnd(int[] vends, int i) {
+        while (vends[i] != 0) {
+            i = vends[i];
+        }
+        return i;
+    }
+    /**
+     * 获取图中的边
+     */
+    private EData[] getEdges() {
+        int index=0;
+        EData[] edges = new EData[edgeNum];
+        for (int i=0; i < vertex.length; i++) {
+            for (int j=i+1; j < vertex.length; j++) {
+                if (matrix[i][j]!=INF) {
+                    edges[index++] = new EData(vertex[i], vertex[j], matrix[i][j]);
+                }
+            }
+        }
+        return edges;
+    }
+
+    /**
+     * 克鲁斯卡尔（Kruskal)最小生成树
+     */
+    public void kruskal() {
+        // 结果数组的索引
+        int index = 0;
+        // 用于保存"已有最小生成树"中每个顶点在该最小树中的终点。
+        int[] vends = new int[edgeNum];
+        // 结果数组，保存kruskal最小生成树的边
+        EData[] rets = new EData[edgeNum];
+        // 获取"图中所有的边"
+        EData[] edges = getEdges();
+        //最小权值
+        int sum=0;
+        // 1.将边按照"权"的大小进行排序(从小到大)
+        sortEdges(edges, edgeNum);
+
+        for (int i=0; i<edgeNum; i++) {
+            // 获取第i条边的"起点"的序号
+            int p1 = getPosition(edges[i].start);
+            // 获取第i条边的"终点"的序号
+            int p2 = getPosition(edges[i].end);
+            // 获取p1在"已有的最小生成树"中的终点
+            int m = getEnd(vends, p1);
+            // 获取p2在"已有的最小生成树"中的终点
+            int n = getEnd(vends, p2);
+            // 如果m!=n，意味着"边i"与"已经添加到最小生成树中的顶点"没有形成环路
+            if (m != n) {
+                // 设置m在"已有的最小生成树"中的终点为n
+                vends[m] = n;
+                // 保存结果
+                rets[index++] = edges[i];
+                sum+=edges[i].weight;
+            }
+        }
+        System.out.printf("Kruskal=%d: ", sum);
+        for (int i = 0; i < index; i++) {
+            System.out.printf("(%c,%c) ", rets[i].start, rets[i].end);
+        }
     }
 }
 

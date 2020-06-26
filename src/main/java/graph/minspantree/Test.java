@@ -16,8 +16,11 @@ public class Test {
                 /*E*/ { INF, INF,   5,   4,   0,   2,   8},
                 /*F*/ {  16,   7,   6, INF,   2,   0,   9},
                 /*G*/ {  14, INF, INF, INF,   8,   9,   0}};
+
+        Graph graph=new Graph(vertex,matrix);
         //Prim算法
-        Prim graph=new Prim(vertex,matrix);
         graph.prim(0);
+        //Kruskal算法
+        graph.kruskal();
     }
 }
