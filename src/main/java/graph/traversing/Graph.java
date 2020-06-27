@@ -73,8 +73,8 @@ public class Graph {
     /**
      * DFS:深度优先遍历递归版
      *
-     * @param i
-     * @param visited
+     * @param i 待访问的当前结点
+     * @param visited 该结点是否被访问
      */
     public void DFS(int i, boolean[] visited) {
         //标记当前顶点以访问
