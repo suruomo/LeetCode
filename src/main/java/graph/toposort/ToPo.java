@@ -7,7 +7,13 @@ import java.util.*;
  * @author 苏若墨
  */
 public class ToPo {
+    /**
+     * 结果集合
+     */
     private List<Node> result;
+    /**
+     * 记录入度为0的结点
+     */
     private Queue<Node> setZeroInDegree;
     private Graph graph;
 
