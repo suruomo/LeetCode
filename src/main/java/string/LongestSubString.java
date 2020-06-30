@@ -31,7 +31,7 @@ public class LongestSubString {
             //添加该字符
             hashMap.put(c, i);
         }
-        System.out.printf("最大字串是：%d\n", max);
-        System.out.printf("最大字串是：%s", sub);
+        System.out.printf("最大子串长度是：%d\n", max);
+        System.out.printf("最大子串是：%s", sub);
     }
 }
