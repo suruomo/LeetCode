@@ -17,7 +17,7 @@ package others;
 public class DivisorGame {
     /**
      * N=1 的时候，区间 (0,1) 中没有整数是 n的因数，所以此时 Alice 败。
-     * N = 2N的时候，Alice 只能拿 1，N 变成 1，Bob 无法继续操作，故 Alice 胜。
+     * N = 2的时候，Alice 只能拿 1，N 变成 1，Bob 无法继续操作，故 Alice 胜。
      * N = 3 的时候，Alice 只能拿 1，N 变成 2，根据 N=2 的结论，我们知道此时 Bob 会获胜，Alice 败。
      * N = 4 的时候，Alice 能拿 1 或 2，如果 Alice 拿 1，根据 N=3 的结论，Bob 会失败，Alice 会获胜。
      * N = 5的时候，Alice 只能拿 1，根据 N = 4 的结论，Alice 会失败。
