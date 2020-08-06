@@ -3,7 +3,7 @@ package others;
 /**
  * @author suruomo
  * @date 2020/8/6 15:27
- * @description:
+ * @description: 38 外观数列
  */
 public class CountAndSay {
     public static void main(String[] args) {
