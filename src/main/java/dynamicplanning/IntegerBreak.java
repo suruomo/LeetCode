@@ -21,7 +21,7 @@ public class IntegerBreak {
             // 记录dp[i]最大值；
             int max=0;
             // j表示可以每个整数i可以被拆分的值；
-            // 将 i 拆分成 jj和 i−j 的和，且 i−j 不再拆分成多个正整数，此时的乘积是 j×(i−j)
+            // 将 i 拆分成 j和 i−j 的和，且 i−j 不再拆分成多个正整数，此时的乘积是 j×(i−j)
             // 将 i拆分成 j 和 i-j的和，且 i−j 继续拆分成多个正整数，此时的乘积是j×dp[i−j]。
             for (int j=1;j<i;j++){
                 max=Math.max(max,Math.max(j*(i-j),j*dp[i-j]));
