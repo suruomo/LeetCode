@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * @Author: suruomo
  * @Date: 2020/9/9 15:38
- * @Description:
+ * @Description: 46 全排列
  */
 public class Permute {
 
