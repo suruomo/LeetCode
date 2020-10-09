@@ -8,7 +8,7 @@ import java.util.Map;
  * @date: 2020/9/25 10:39
  * @description: 106 根据中序后序遍历构造二叉树
  */
-public class BuildTree {
+public class BuildTree1 {
     /**
      * 结点类
      */
