@@ -1,18 +1,25 @@
-package sort;
+package array;
 
-import java.util.Arrays;
 
 /**
- * 快速排序
- * @author 苏若墨
+ * @author: suruomo
+ * @date: 2020/10/27 9:51
+ * @description: 215  数组中的第K个最大元素
  */
-public class QuickSort {
+public class FindKthLargest {
     public static void main(String[] args) {
-        int []arr = {9,8,7,6,5,4,3,2,1};
-        quickSort(arr,0,arr.length-1);
-        System.out.println(Arrays.toString(arr));
+        int[] nums={3,2,1,5,6,4};
+        int k=2;
+        System.out.println(findKthLargest(nums,k));
     }
 
+    private static int findKthLargest(int[] nums, int k) {
+        if (nums==null||k<1){
+            return 0;
+        }
+        quickSort(nums,0,nums.length-1);
+        return nums[nums.length-k];
+    }
     /**
      * 快速排序
      * @param arr 待排序数组
@@ -41,7 +48,7 @@ public class QuickSort {
         //选取划分标准
         int base=arr[end];
         while (start<end){
-             // 从左向右移动，若当前元素小于基准，满足划分条件，start++继续向右移动
+            // 从左向右移动，若当前元素小于基准，满足划分条件，start++继续向右移动
             while(start<end&&arr[start]<=base){
                 start++;
             }
@@ -67,6 +74,4 @@ public class QuickSort {
         //返回基准所在下标，end或者start都可以
         return end;
     }
-
-
 }

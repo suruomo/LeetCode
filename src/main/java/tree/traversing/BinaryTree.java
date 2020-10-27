@@ -25,15 +25,13 @@ public class BinaryTree {
      * @param root
      */
     public void preOrderNonRecursive(BinaryTreeNode root) {
+
         Stack<BinaryTreeNode> stack = new Stack<>();
-        while (true) {
+        while (!stack.isEmpty()||root!=null) {
             while (root != null) {
                 System.out.print(root.getData() + "\t");
                 stack.push(root);
                 root = root.getLeft();
-            }
-            if (stack.isEmpty()) {
-                break;
             }
             root = stack.pop();
             root = root.getRight();
