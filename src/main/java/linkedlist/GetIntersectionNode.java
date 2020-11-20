@@ -23,17 +23,8 @@ public class GetIntersectionNode {
         ListNode pA = headA;
         ListNode pB = headB;
         while (pA != pB) {
-            pA = pA.next;
-            pB = pB.next;
-            if (pA == null && pB == null) {
-                return null;
-            }
-            if (pA == null) {
-                pA = headB;
-            }
-            if (pB == null) {
-                pB = headA;
-            }
+            pA =pA!=null? pA.next:pB;
+            pB =pB!=null? pB.next:pA;
         }
         return pA;
     }

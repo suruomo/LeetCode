@@ -18,6 +18,12 @@ public class DetectCycle {
             next = null;
         }
     }
+
+    /**
+     * 哈希
+     * @param head
+     * @return
+     */
     public ListNode detectCycle(ListNode head) {
         HashSet<ListNode> set=new HashSet<>();
         while (head!=null){
@@ -28,6 +34,36 @@ public class DetectCycle {
                 set.add(head);
             }
             head=head.next;
+        }
+        return null;
+    }
+
+    /**
+     * 快慢指针
+     * 数学推导
+     * @param head
+     * @return
+     */
+    public ListNode detectCycle1(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        ListNode slow = head, fast = head;
+        while (fast != null) {
+            slow = slow.next;
+            if (fast.next != null) {
+                fast = fast.next.next;
+            } else {
+                return null;
+            }
+            if (fast == slow) {
+                ListNode ptr = head;
+                while (ptr != slow) {
+                    ptr = ptr.next;
+                    slow = slow.next;
+                }
+                return ptr;
+            }
         }
         return null;
     }
