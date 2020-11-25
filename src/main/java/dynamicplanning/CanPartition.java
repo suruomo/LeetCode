@@ -27,6 +27,8 @@ public class CanPartition {
         if (maxNum > target) {
             return false;
         }
+        // dp[i][j] 表示从数组的 [0,i] 下标范围内选取若干个正整数（可以是 0 个）
+        // 是否存在一种选取方案使得被选取的正整数的和等于 j。
         boolean[][] dp = new boolean[n][target + 1];
         // 边界情况1：不选取任何正整数
         for (int i = 0; i < n; i++) {

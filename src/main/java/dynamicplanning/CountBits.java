@@ -14,8 +14,21 @@ public class CountBits {
     private static int[] countBits(int num) {
         int[] res=new int[num+1];
         for(int i  = 0 ; i <= num ; i++){
-            res[i] = Integer.bitCount(i);
+            res[i] = count(i);
         }
         return res;
+    }
+
+    /**
+     * 计算数字n中1个数
+     * @param n
+     * @return
+     */
+    private static int count(int n) {
+        int count=0;
+        for (count= 0; n>0; ++count) {
+            n&=(n-1);
+        }
+        return count;
     }
 }
