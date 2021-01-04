@@ -29,4 +29,21 @@ public class Fibonacci {
         }
         return nums[n];
     }
+
+    private static int fibonacci1(int n) {
+        if (n == 0) {
+            return 0;
+        }
+        if (n == 1) {
+            return 1;
+        }
+        int nums0 = 0;
+        int nums1 = 1;
+        for (int i = 2; i <= n; i++) {
+            int temp=nums1;
+            nums1=nums0+nums1;
+            nums0=temp;
+        }
+        return nums1;
+    }
 }
