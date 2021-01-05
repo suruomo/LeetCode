@@ -66,7 +66,7 @@ public class CombinationSum2 {
             }
             //选择
             combine.add(candidates[i]);
-            //选择下一位，避免重复
+            //选择下一位，避免重复,可重复为i
             dfs(candidates, target-candidates[i], ans, combine, i + 1);
             //撤销选择
             combine.remove(combine.size() - 1);

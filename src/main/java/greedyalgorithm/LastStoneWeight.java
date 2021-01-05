@@ -25,12 +25,11 @@ public class LastStoneWeight {
             Arrays.sort(stones);
             int x = stones[index];
             int y = stones[index - 1];
+            stones[index-1]=0;
             if(x==y){
-                stones[index-1]=0;
                 stones[index]=0;
             }
             else {
-                stones[index-1]=0;
                 stones[index]=x-y;
             }
         }

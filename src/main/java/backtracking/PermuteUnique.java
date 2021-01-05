@@ -21,7 +21,7 @@ public class PermuteUnique {
         List<Integer> perm = new ArrayList<Integer>();
         vis = new boolean[nums.length];
         Arrays.sort(nums);
-        backtrack(nums, ans, 0, perm);
+        backtrack(nums, ans, perm);
         return ans;
     }
 
@@ -29,12 +29,11 @@ public class PermuteUnique {
      * 回溯搜索
      * @param nums 目标数组
      * @param ans 结果集
-     * @param idx 当前遍历位置
      * @param perm 当前路径
      */
-    public void backtrack(int[] nums, List<List<Integer>> ans, int idx, List<Integer> perm) {
+    public void backtrack(int[] nums, List<List<Integer>> ans,  List<Integer> perm) {
         //结束条件
-        if (idx == nums.length) {
+        if (perm.size() == nums.length) {
             ans.add(new ArrayList<Integer>(perm));
             return;
         }
@@ -51,10 +50,10 @@ public class PermuteUnique {
             perm.add(nums[i]);
             vis[i] = true;
             //下一层回溯
-            backtrack(nums, ans, idx + 1, perm);
+            backtrack(nums, ans,  perm);
             //取消选择
             vis[i] = false;
-            perm.remove(idx);
+            perm.remove(perm.size()-1);
         }
     }
 }
