@@ -14,7 +14,7 @@ import java.util.Map;
  * 如果两个直接相连的房子在同一天晚上被打劫，房屋将自动报警。
  * 计算在不触动警报的情况下，小偷一晚能够盗取的最高金额。
  */
-public class Rob {
+public class Rob3 {
     /**
      * 结点类
      */

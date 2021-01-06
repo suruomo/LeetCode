@@ -1,13 +1,13 @@
 package dynamicplanning;
 
 /**
- * 问题：
+ * 问题：198 打家劫舍
  * 如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。
  * 给定一个代表每个房屋存放金额的非负整数数组，计算你在不触动警报装置的情况下，能够偷窃到的最高金额。
  *
  * @author 苏若墨
  */
-public class HouseRobber {
+public class Rob1 {
     public static void main(String[] args) {
         int[] nums = {2, 5, 42, 15, 9, 6};
         System.out.println("寻常思路：抢劫最大金额是：" + rob(nums));
