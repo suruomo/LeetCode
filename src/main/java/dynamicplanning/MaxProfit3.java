@@ -1,78 +1,65 @@
 package dynamicplanning;
 
-
-import java.util.Arrays;
-
 /**
  * @author: suruomo
- * @date: 2020/12/28 11:53
- * @description: 188. 买卖股票的最佳时机 IV
- * 给定一个整数数组prices ，它的第 i 个元素prices[i] 是一支给定的股票在第 i 天的价格。
- * 设计一个算法来计算你所能获取的最大利润。你最多可以完成 k 笔交易。
+ * @date: 2021/1/9 11:37
+ * @description: 123. 买卖股票的最佳时机 III
+ * 给定一个数组，它的第 i 个元素是一支给定的股票在第 i 天的价格。
  *
- * 卖出算一笔交易完成！！！！
+ * 设计一个算法来计算你所能获取的最大利润。你最多可以完成两笔交易。
+ *
+ * 注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
  *
  */
 public class MaxProfit3 {
-    public int maxProfit(int k, int[] prices) {
-        if(prices==null||prices.length==0){
-            return 0;
-        }
-        int n= prices.length;
-        // 所以由于一买一卖，交易肯定不会大于n/2
-        k=Math.min(k,n/2);
-        // buy[i][j] 表示对于数组prices[0..i]中的价格而言，进行恰好j笔交易
-        // 并且当前手上持有一支股票，这种情况下的最大利润
-        int[][] buy=new int[n][k+1];
-        // sell[i][j] 表示对于数组prices[0..i]中的价格而言，进行恰好j笔交易
-        // 并且当前手上没有一支股票，这种情况下的最大利润
-        int[][] sell=new int[n][k+1];
-        buy[0][0]=-prices[0];
-        sell[0][0]=0;
-        for (int i = 0; i <=k; i++) {
-            buy[0][i]= sell[0][i]=Integer.MIN_VALUE/2;
-        }
-        for (int i = 1; i < n; i++) {
-            buy[i][0]= Math.max(buy[i-1][0], sell[i-1][0]-prices[i]);
-            for (int j = 1; j <=k; j++) {
-                buy[i][j]= Math.max(buy[i-1][j], sell[i-1][j]-prices[i]);
-                sell[i][j]= Math.max(sell[i-1][0], buy[i-1][j-1]+prices[i]);
-            }
-        }
-        // 最终的答案即为sell[n−1][0..k] 中的最大值。
-        return Arrays.stream(sell[n-1]).max().getAsInt();
-    }
-
     /**
-     * 优化空间
-     * @param k
+     * 动态规划数组
      * @param prices
      * @return
      */
-    public int maxProfit1(int k, int[] prices) {
-        if (prices.length == 0) {
-            return 0;
-        }
-
+    public int maxProfit(int[] prices) {
         int n = prices.length;
-        k = Math.min(k, n / 2);
-        int[] buy = new int[k + 1];
-        int[] sell = new int[k + 1];
-
-        buy[0] = -prices[0];
-        sell[0] = 0;
-        for (int i = 1; i <= k; ++i) {
-            buy[i] = sell[i] = Integer.MIN_VALUE / 2;
+        int[][] dp=new int[n][5];
+        // 1.没有操作
+        dp[0][0]=0;
+        // 2.第一次买入
+        dp[0][1]=-prices[0];
+        // 3.第一次卖出
+        dp[0][2]=0;
+        // 4.第二次买入
+        dp[0][3]=-prices[0];
+        // 5.第二次卖出
+        dp[0][4]=0;
+        for (int i = 1; i < n; i++) {
+            dp[i][0]=dp[i-1][0];
+            dp[i][1]=Math.max(dp[i-1][1],dp[i-1][0]-prices[i]);
+            dp[i][2]=Math.max(dp[i-1][2],dp[i-1][1]+prices[i]);
+            dp[i][3]=Math.max(dp[i-1][3],dp[i-1][2]-prices[i]);
+            dp[i][4]=Math.max(dp[i-1][4],dp[i-1][3]+prices[i]);
         }
-
+        return dp[n-1][4];
+    }
+    /**
+     * 优化空间解法
+     * @param prices
+     * @return
+     */
+    public int maxProfit1(int[] prices) {
+        int n = prices.length;
+        // 只进行了一次买操作
+        int buy1 = -prices[0];
+        // 进行了一笔买和一笔卖操作，即完成一笔交易
+        int sell1 = 0;
+        // 在完成一笔交易的前提下，进行第二次买操作
+        int buy2 = -prices[0];
+        // 完成两笔交易
+        int sell2 = 0;
         for (int i = 1; i < n; ++i) {
-            buy[0] = Math.max(buy[0], sell[0] - prices[i]);
-            for (int j = 1; j <= k; ++j) {
-                buy[j] = Math.max(buy[j], sell[j] - prices[i]);
-                sell[j] = Math.max(sell[j], buy[j - 1] + prices[i]);
-            }
+            buy1 = Math.max(buy1, -prices[i]);
+            sell1 = Math.max(sell1, buy1 + prices[i]);
+            buy2 = Math.max(buy2, sell1 - prices[i]);
+            sell2 = Math.max(sell2, buy2 + prices[i]);
         }
-
-        return Arrays.stream(sell).max().getAsInt();
+        return sell2;
     }
 }

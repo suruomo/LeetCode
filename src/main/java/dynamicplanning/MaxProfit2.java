@@ -12,7 +12,7 @@ package dynamicplanning;
  *
  * 本部分为动态规划解法，贪心解法详情见其他部分
  */
-public class MaxProfit {
+public class MaxProfit2 {
     /**
      * 动态规划 1：使用数组
      * @param prices
