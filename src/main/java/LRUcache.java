@@ -106,23 +106,39 @@ public class LRUcache {
         }
     }
 
-
-
+    /**
+     * 移动节点至头部
+     * @param node
+     */
     private void moveToHead(LinkedNode node) {
         removeNode(node);
         addToHead(node);
     }
 
+    /**
+     * 添加节点至头部
+     * @param node
+     */
     private void addToHead(LinkedNode node) {
         node.pre=head;
         node.next=head.next;
         head.next.pre=node;
         head.next=node;
     }
+
+    /**
+     * 移除节点
+     * @param node
+     */
     private void removeNode(LinkedNode node) {
         node.pre.next=node.next;
         node.next.pre=node.pre;
     }
+
+    /**
+     * 移除尾部节点，tail的前一个节点，tail不是实际节点
+     * @return
+     */
     private LinkedNode removeTail() {
         LinkedNode res=tail.pre;
         removeNode(res);
