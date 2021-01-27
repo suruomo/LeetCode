@@ -1,9 +1,6 @@
 package offer;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * @author: suruomo
@@ -11,6 +8,7 @@ import java.util.Queue;
  * @description:
  * 剑指 Offer 32 - I. 从上到下打印二叉树
  * 剑指 Offer 32 - II. 从上到下打印二叉树 II
+ * 剑指 Offer 32 - III. 从上到下打印二叉树 III
  */
 public class LevelOrder {
     public class TreeNode{
@@ -80,5 +78,42 @@ public class LevelOrder {
             lists.add(list);
         }
         return lists;
+    }
+
+    /**
+     * 3.按照之字形顺序打印二叉树，
+     * 即第一行按照从左到右的顺序打印，第二层按照从右到左的顺序打印，
+     * 第三行再按照从左到右的顺序打印，其他行以此类推。
+     * @param root
+     * @return
+     */
+    public List<List<Integer>> levelOrder2(TreeNode root) {
+        Queue<TreeNode> queue=new LinkedList<>();
+        List<List<Integer>> res=new LinkedList<>();
+        if (root!=null){
+            queue.add(root);
+        }
+        while (!queue.isEmpty()){
+            LinkedList<Integer> deque=new LinkedList<>();
+            int n=queue.size();
+            for (int i = 0; i < n; i++) {
+                TreeNode node=queue.poll();
+                // 奇数层添加尾部
+                if (res.size()%2==0){
+                    deque.addLast(node.val);
+                }else {
+                // 偶数层添加头部
+                    deque.addFirst(node.val);
+                }
+                if (node.left!=null){
+                    queue.add(node.left);
+                }
+                if (node.right!=null){
+                    queue.add(node.right);
+                }
+            }
+            res.add(deque);
+        }
+        return res;
     }
 }
