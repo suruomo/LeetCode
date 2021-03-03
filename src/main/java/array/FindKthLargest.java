@@ -13,6 +13,12 @@ public class FindKthLargest {
         System.out.println(findKthLargest(nums,k));
     }
 
+    /**
+     * 1.快速排序
+     * @param nums
+     * @param k
+     * @return
+     */
     private static int findKthLargest(int[] nums, int k) {
         if (nums==null||k<1){
             return 0;
@@ -74,4 +80,64 @@ public class FindKthLargest {
         //返回基准所在下标，end或者start都可以
         return end;
     }
+
+    /**
+     *2.堆排序
+     * @param nums
+     * @param k
+     * @return
+     */
+    private static int findKthLargest1(int[] nums, int k) {
+       int size=nums.length;
+       // 创建大顶堆
+       buildMaxHeap(nums,size);
+       // 排序前k个，此时堆顶即nums[0]为第k大个元素
+       for (int i = nums.length-1; i >=nums.length-k+1; i--) {
+            swap(nums,0,i);
+            size--;
+            adjust(nums,0,size);
+        }
+       return nums[0];
+    }
+
+    /**
+     * 创建大顶堆
+     * @param nums
+     * @param length
+     */
+    private static void buildMaxHeap(int[] nums, int length) {
+        for (int i = length/2-1; i >=0; i--) {
+            adjust(nums,i,length);
+        }
+    }
+
+    /**
+     * 调整堆
+     * @param nums
+     * @param i
+     * @param length
+     */
+    private static void adjust(int[] nums, int i, int length) {
+        int hole=nums[i];
+        for (int j = 2*i+1; j < length; j=2*j+1) {
+            if (j+1<length&&nums[j]<nums[j+1]){
+                j++;
+            }
+            if (nums[j]>hole){
+                // 交换值
+                swap(nums,i,j);
+                i=j;
+            }else {
+                break;
+            }
+        }
+    }
+
+    private static void swap(int[] nums, int i, int j) {
+        int temp=nums[i];
+        nums[i]=nums[j];
+        nums[j]=temp;
+    }
+
+
 }
