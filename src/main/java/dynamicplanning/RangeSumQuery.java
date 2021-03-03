@@ -22,6 +22,7 @@ public class RangeSumQuery {
 
     private static void NumArray(int[] nums) {
         sum = new int[nums.length + 1];
+        // sum[i]表示下标0到i-1的前缀和
         for (int i = 1; i < nums.length; i++) {
             sum[i] += sum[i - 1] + nums[i];
         }
