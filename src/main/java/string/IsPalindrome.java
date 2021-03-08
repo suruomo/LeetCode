@@ -11,7 +11,9 @@ public class IsPalindrome {
     }
 
     private static boolean isPalindrome(String s) {
-        if (s == null) return true;
+        if (s == null||"".equals(s)) {
+            return true;
+        }
         s = s.toLowerCase();
         int l = s.length();
         StringBuilder str = new StringBuilder(l);

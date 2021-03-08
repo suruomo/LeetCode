@@ -42,6 +42,11 @@ public class Trie {
         root.isEnd=true;
     }
 
+    /**
+     * 查找字符串
+     * @param word
+     * @return
+     */
     public boolean search(String word){
         Trie root=this;
         char[] words=word.toCharArray();
@@ -54,6 +59,11 @@ public class Trie {
         return root.isEnd;
     }
 
+    /**
+     * 前缀查找
+     * @param prefix
+     * @return
+     */
     public boolean startWith(String prefix){
         Trie root=this;
         char[] words=prefix.toCharArray();

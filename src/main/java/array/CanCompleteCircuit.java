@@ -35,6 +35,7 @@ public class CanCompleteCircuit {
             if (cnt == n) {
                 return i;
             } else {
+                // 不行的话 从下一个站点开始 检查
                 i = i + cnt + 1;
             }
         }

@@ -16,7 +16,7 @@ public class GetSum {
     /**
      *
      * @param a 不算进位相加值：异或
-     * @param b 进位：与操作左移一位
+     * @param b 进位：与操作再左移一位
      * @return
      */
     public int getSum(int a, int b) {
