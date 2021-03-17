@@ -11,7 +11,7 @@ public class MergeSort {
         int[] tmp=new int[nums.length];
         mergeSort(nums,0,nums.length-1,tmp);
         System.out.println("排序后数组是：");
-        for (int num : nums) {
+        for (int num : tmp) {
             System.out.print(num + ",");
         }
     }

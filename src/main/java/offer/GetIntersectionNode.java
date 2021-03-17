@@ -23,17 +23,8 @@ public class GetIntersectionNode {
         ListNode A1=headA;
         ListNode B1=headB;
         while (A1!=B1){
-            // 不能判断A1.next是否为空，会陷入死循环
-            if (A1!=null){
-                A1=A1.next;
-            }else {
-                A1=headB;
-            }
-            if (B1!=null){
-                B1=B1.next;
-            }else {
-                B1=headA;
-            }
+           A1=A1==null?headB:A1.next;
+           B1=B1==null?headA:B1.next;
         }
         return A1;
     }

@@ -5,7 +5,9 @@ import java.util.HashMap;
 /**
  * @author: suruomo
  * @date: 2020/12/29 10:45
- * @description:
+ * @description: 剑指 Offer 07. 重建二叉树
+ * 输入某二叉树的前序遍历和中序遍历的结果，请重建该二叉树。
+ * 假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
  */
 public class BuildTree {
     public class TreeNode{
@@ -55,9 +57,8 @@ public class BuildTree {
         int left_sub_size=in_root-in_left;
         // 2.左子树递归
         root.left=build(preorder,inorder,pre_left+1,pre_left+left_sub_size,in_left,in_root-1);
-        root.right=build(preorder,inorder,pre_left+left_sub_size+1,pre_right,in_root+1,in_right);
         // 3.右子树递归
-
+        root.right=build(preorder,inorder,pre_left+left_sub_size+1,pre_right,in_root+1,in_right);
         return root;
     }
 }

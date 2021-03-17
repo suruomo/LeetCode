@@ -1,6 +1,5 @@
 package offer;
 
-import com.sun.corba.se.impl.oa.poa.ActiveObjectMap;
 
 /**
  * @author: suruomo
@@ -34,9 +33,9 @@ public class FindNumberIn2DArray {
             if (num==target){
                 return true;
             }else if(num<target){
-                column++;
+                row++;
             }else {
-                row--;
+                column--;
             }
         }
         return false;
