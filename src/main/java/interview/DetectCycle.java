@@ -1,11 +1,10 @@
 package interview;
 
-import java.util.List;
 
 /**
  * @author: suruomo
  * @date: 2021/3/26 13:59
- * @description:
+ * @description: 判断链表是否有环，有的话返回入环点，否则返回null
  */
 public class DetectCycle {
     class ListNode{
