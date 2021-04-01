@@ -26,9 +26,9 @@ public class MergeSort {
     private static void mergeSort(int[] nums, int low, int high, int[] tmp) {
         if (low<high){
             int mid=(low+high)/2;
-            // 右边排序
-            mergeSort(nums,low,mid,tmp);
             // 左边排序
+            mergeSort(nums,low,mid,tmp);
+            // 右边排序
             mergeSort(nums,mid+1,high,tmp);
             // 两边最终排序
             sort(nums,low,mid,high,tmp);
