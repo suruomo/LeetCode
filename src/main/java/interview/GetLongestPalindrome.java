@@ -11,8 +11,11 @@ public class GetLongestPalindrome {
     public int getLongestPalindrome(String A, int n) {
         boolean[][] dp=new boolean[n][n];
         int maxLength=0;
+        // 遍历每个长度
         for (int len = 0; len < n; len++) {
+            // 遍历每个起始点i
             for (int i = 0; i+len< n; i++) {
+                // j为每个子串终点
                 int j=i+len;
                 if (len==0){
                     dp[i][j]=true;
