@@ -1,6 +1,4 @@
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-import java.util.Scanner;
+import java.util.Arrays;
 
 /**
  * @author: suruomo
@@ -9,26 +7,22 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        while (sc.hasNext()){
-           String s=sc.nextLine();
-           System.out.println(get(s));
+        int []arr = {1,5,3,7,4,0,6,8,2,9};
+        sort(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+
+    private static void sort(int[] arr) {
+        int k=0;
+        for (int gap = arr.length/2; gap >0; gap/=2) {
+            for (int i = gap; i < arr.length; i++) {
+                int num=arr[i];
+                for (k =i; k>=gap&&arr[k-gap]>num ; k-=gap) {
+                    arr[k]=arr[k-gap];
+                }
+                arr[k]=num;
+            }
         }
     }
 
-    private static String get(String s) {
-        LinkedHashSet<Character> set=new LinkedHashSet<>();
-        for (int i = 0; i < s.length(); i++) {
-            if (!set.contains(s.charAt(i))){
-                set.add(s.charAt(i));
-            }else {
-                continue;
-            }
-        }
-        StringBuilder stringBUilder=new StringBuilder();
-        for(Character c:set){
-            stringBUilder.append(c);
-        }
-        return stringBUilder.toString();
-    }
 }

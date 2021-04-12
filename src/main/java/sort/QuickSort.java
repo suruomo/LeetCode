@@ -24,7 +24,7 @@ public class QuickSort {
         if(start>=end){
             return;
         }
-        int partition = divide(arr, start, end);
+        int partition = divide1(arr, start, end);
         //以基准划分两边分别递归的进行快排
         quickSort(arr,start,partition-1);
         quickSort(arr,partition+1,end);
@@ -66,5 +66,31 @@ public class QuickSort {
         }
         //返回基准所在下标，end或者start都可以
         return end;
+    }
+    private static int divide1(int[] arr, int start, int end) {
+        int temp=arr[end];
+        while (start<end){
+            while (start<end&&arr[start]<=temp){
+                start++;
+            }
+            if (start<end){
+                swap(arr,start,end);
+                end--;
+            }
+            while (start<end&&arr[end]>=temp){
+                end--;
+            }
+            if (start<end){
+                swap(arr,start,end);
+                start++;
+            }
+        }
+        return start;
+    }
+
+    private static void swap(int[] arr, int start, int end) {
+        int t=arr[start];
+        arr[start]=arr[end];
+        arr[end]=t;
     }
 }
