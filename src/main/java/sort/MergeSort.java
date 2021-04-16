@@ -65,8 +65,7 @@ public class MergeSort {
         
         // 排好序部分拷贝至原数组，便于下一次使用
         for (int l = 0; l < i; l++) {
-            nums[low+l]= tmp[l];
+            nums[low + l] = tmp[l];
         }
-        
     }
 }
