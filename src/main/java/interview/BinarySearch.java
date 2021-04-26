@@ -16,9 +16,9 @@ public class BinarySearch {
      * @return int整型
      */
     public int search (int[] nums, int target) {
-        int left=0;
         int low = 0;
         int high = nums.length-1;
+        int left=0;
         int mid = 0;
         while(low <= high){
             mid = low+ (high- low) / 2;
