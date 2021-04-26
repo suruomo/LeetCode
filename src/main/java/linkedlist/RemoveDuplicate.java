@@ -1,6 +1,7 @@
 package linkedlist;
 
 /**
+ * 删除有序链表中重复节点
  * @author 苏若墨
  */
 public class RemoveDuplicate {
