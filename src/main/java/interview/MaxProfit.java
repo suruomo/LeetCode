@@ -1,6 +1,5 @@
 package interview;
 
-import org.omg.CORBA.INTERNAL;
 
 /**
  * @author: suruomo

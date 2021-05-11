@@ -160,7 +160,8 @@ public class BinaryTree {
          queue.offer(root);
          while ((!queue.isEmpty())){
              List<Integer> list=new ArrayList<>();
-             for(int i=0;i<queue.size();i++){
+             int size=queue.size();
+             for(int i=0;i<size;i++){
                  BinaryTreeNode node = queue.poll();
                  list.add(node.getData());
                  if (node.getLeft() != null) {
