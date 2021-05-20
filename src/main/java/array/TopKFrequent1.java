@@ -11,6 +11,12 @@ import java.util.*;
  * 返回的答案应该按单词出现频率由高到低排序。如果不同的单词有相同出现频率，按字母顺序排序。
  */
 public class TopKFrequent1 {
+    /**
+     * 哈希表+排序
+     * @param words
+     * @param k
+     * @return
+     */
     public static List<String> topKFrequent(String[] words, int k) {
         Map<String, Integer> cnt = new HashMap<String, Integer>();
         for (String word : words) {
