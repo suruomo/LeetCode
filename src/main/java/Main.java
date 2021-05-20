@@ -8,6 +8,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         int []arr = {1,5,3,7,4,0,6,8,2,9};
+<<<<<<< Updated upstream
         shellSort(arr);
         System.out.println(Arrays.toString(arr));
     }
@@ -26,4 +27,8 @@ public class Main {
     }
 
 
+=======
+        System.out.println(Arrays.toString(arr));
+    }
+>>>>>>> Stashed changes
 }
