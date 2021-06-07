@@ -1,9 +1,9 @@
-package doubleerview;
+package interview;
 
 /**
  * @author: suruomo
  * @date: 2021/6/7 11:44
- * @description: 乘机最大子数组
+ * @description: 乘积最大子数组
  */
 public class MaxProduct {
     public double maxProduct(double[] nums) {
