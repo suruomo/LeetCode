@@ -1,6 +1,5 @@
 package huawei;
 
-import array.MaxConsecutiveOnes;
 
 import java.util.Scanner;
 
