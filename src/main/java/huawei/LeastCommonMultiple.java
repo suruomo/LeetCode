@@ -18,6 +18,12 @@ public class LeastCommonMultiple {
         }
     }
 
+    /**
+     * 求最大公约数
+     * @param a
+     * @param b
+     * @return
+     */
     private static int gcd(int a, int b) {
         // 保证a>b
         if (a<b){
