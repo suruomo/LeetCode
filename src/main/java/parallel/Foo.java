@@ -3,45 +3,42 @@ package parallel;
 /**
  * @author suruomo
  * @date 2020/7/22 16:38
- * @description: 按序打印
- * 三个不同的线程将会共用一个 Foo 实例。
- * 以确保 two() 方法在 one() 方法之后被执行，three() 方法在 two() 方法之后被执行。
+ * @description: 三个线程按序执行
  */
 public class Foo {
-    public Foo( ) {
-    }
 
-    public static class First implements Runnable{
+
+    static class One implements Runnable{
+
         @Override
         public void run() {
-            synchronized (this){
-                System.out.println("first");
-            }
+            System.out.println("One");
         }
     }
-    public static class Second implements Runnable{
+    static class Second implements Runnable{
+
         @Override
         public void run() {
-            synchronized (this){
-                System.out.println("second");
-            }
+            System.out.println("Second");
         }
     }
-    public static class Third implements Runnable{
+    static class Third implements Runnable{
+
         @Override
         public void run() {
-            synchronized (this){
-                System.out.println("third");
-            }
+            System.out.println("Third");
         }
     }
 
-    public static void main(String[] args) {
-        Runnable runnable1=new First();
-        Runnable runnable2=new Second();
-        Runnable runnable3=new Third();
-        runnable1.run();
-        runnable2.run();
-        runnable3.run();
+    public static void main(String[] args) throws InterruptedException {
+        Thread thread1=new Thread(new One());
+        Thread thread2=new Thread(new Second());
+        Thread thread3=new Thread(new Third());
+        thread1.start();
+        thread1.join();
+        thread2.start();
+        thread2.join();
+        thread3.start();
+        thread3.join();
     }
 }
