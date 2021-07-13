@@ -8,27 +8,6 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         int []arr = {1,5,3,7,4,0,6,8,2,9};
-<<<<<<< Updated upstream
-        shellSort(arr);
         System.out.println(Arrays.toString(arr));
     }
-
-    private static void shellSort(int[] arr) {
-        int j=0;
-        for (int gap=arr.length/2;gap>0;gap/=2){
-            for (int i=gap;i<arr.length;i++){
-                int t=arr[i];
-                for (j=i;j>=gap&&arr[j-gap]>t;j=j-gap){
-                    arr[j]=arr[j-gap];
-                }
-                arr[j]=t;
-            }
-        }
-    }
-
-
-=======
-        System.out.println(Arrays.toString(arr));
-    }
->>>>>>> Stashed changes
 }
