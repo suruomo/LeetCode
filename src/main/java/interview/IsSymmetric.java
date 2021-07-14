@@ -3,7 +3,7 @@ package interview;
 /**
  * @author: suruomo
  * @date: 2021/4/16 15:09
- * @description:
+ * @description: 判断是否对称
  */
 public class IsSymmetric {
     public class TreeNode{

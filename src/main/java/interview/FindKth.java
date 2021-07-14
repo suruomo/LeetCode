@@ -80,7 +80,7 @@ public class FindKth {
         // 堆排序
         for (int i = n-1; i <n-K+1; i--) {
             swap(a,i,0);
-            heapify(a,i,0);
+            heapify(a,i,0 );
         }
         //
         return a[n-K];

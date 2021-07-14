@@ -12,7 +12,7 @@ public class LongestRepeatSubString {
     public int solve (String a) {
         int n=a.length();
         int len=n/2;
-        for (int i = n; i>0; i--) {
+        for (int i = len; i>0; i--) {
             for (int j = 0; j <=n-2*i; j++) {
                 if (judge(a,j,i)){
                     return 2*i;
