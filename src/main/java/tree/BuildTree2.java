@@ -1,5 +1,6 @@
 package tree;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -60,6 +61,12 @@ public class BuildTree2 {
         return root;
     }
 
+    /**
+     * 1.方法一
+     * @param preorder
+     * @param inorder
+     * @return
+     */
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         int n = preorder.length;
         // 构造哈希映射，帮助我们快速定位根节点
@@ -68,5 +75,35 @@ public class BuildTree2 {
             indexMap.put(inorder[i], i);
         }
         return myBuildTree(preorder, inorder, 0, n - 1, 0, n - 1);
+    }
+
+    /**
+     * 2.方法二
+     * @param preOrder
+     * @param inOrder
+     * @return
+     */
+    public TreeNode buildTree1(int[] preOrder, int[] inOrder) {
+        if (preOrder == null || preOrder.length == 0) {
+            return null;
+        }
+
+        int val = preOrder[0], pos = 0, len = preOrder.length;
+        TreeNode root = new TreeNode(val);
+
+        // 找到中序数组中根节点位置
+        for(; pos < len; pos++){
+            if (inOrder[pos] == val) {
+                break;
+            }
+        }
+        // 左右子树继续拆分，递归重构
+        // 此处 Arrays.copyOfRange 方法起点为 len 不抛异常，返回[]，对应递归结束条件。
+        root.left = buildTree1(Arrays.copyOfRange(preOrder, 1, pos + 1),
+                Arrays.copyOfRange(inOrder, 0, pos));
+        root.right = buildTree1(Arrays.copyOfRange(preOrder, pos + 1, len),
+                Arrays.copyOfRange(inOrder, pos + 1, len));
+
+        return root;
     }
 }
