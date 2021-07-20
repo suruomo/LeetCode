@@ -9,7 +9,7 @@ package bit;
 public class HammingWeight {
     public static void main(String[] args) {
         int n=3;
-        System.out.println(count(n));
+        System.out.println(hammingWeight(n));
     }
 
     /**
@@ -18,7 +18,7 @@ public class HammingWeight {
      * @param n
      * @return
      */
-    public int hammingWeight(int n) {
+    public static int hammingWeight(int n) {
         //计数器
         int bits = 0;
         int mask = 1;

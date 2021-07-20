@@ -9,11 +9,25 @@ import java.util.Stack;
  * 用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。
  */
 public class Queue {
-    Stack<Integer> stack1 = new Stack<Integer>();
-    Stack<Integer> stack2 = new Stack<Integer>();
+    private Stack<Integer> stack1;
+    private Stack<Integer> stack2;
+    /**
+     * 栈容量
+     */
+    private int size;
+
+    public Queue(int size) {
+        this.size = size;
+        stack1 = new Stack<Integer>();
+        stack2 = new Stack<Integer>();
+    }
 
     public void push(int node) {
-        stack1.push(node);
+        if (stack1.size()+stack2.size()<=size){
+            stack1.push(node);
+        }else {
+            throw new IndexOutOfBoundsException("栈已满");
+        }
     }
 
     public int pop() {
