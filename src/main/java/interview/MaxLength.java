@@ -1,15 +1,13 @@
 package interview;
 
-import org.omg.CORBA.INTERNAL;
 
 import java.util.HashMap;
-import java.util.HashSet;
 
 /**
  * @author: suruomo
  * @date: 2021/3/26 13:12
  * @description:
- * 给定一个数组arr，返回arr的最长无的重复子串的长度(无重复指的是所有数字都不相同)。
+ * 给定一个数组arr，返回arr的最长的无重复子串的长度(无重复指的是所有数字都不相同)。
  */
 public class MaxLength {
     /**

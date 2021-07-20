@@ -31,7 +31,7 @@ public class MergeKLists {
     private ListNode merge(ArrayList<ListNode> lists, int l, int r) {
         // 已经归并结束
         if (l==r){
-            return lists.get(0);
+            return lists.get(l);
         }
         if (l>r){
             return null;
